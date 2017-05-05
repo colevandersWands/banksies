@@ -1,0 +1,31 @@
+rephrasing problems until it looks like a function description
+	args, return value, behavior
+
+breaking the problem into pieces you DO know how to code
+	think of your solutions as stringing together problems you understand
+	this will make debugging, testing, updating, ... MUCH simpler
+
+saving all of your intermediate steps
+	to 'reset' if you veer off track
+
+have clear input/output categories and examples to work backwards from
+	make sure you're solving the right problem!
+
+fall back on things that work (built-in language features, code you already wrote)
+	don't do the same work twice
+
+favor readable over elegant or efficient solutions
+	easier to *
+
+
+
+TL;DR - 
+	1) keep your working memory clear - 
+		let clear code, good habits, and careful planning do the remembering for you
+	2) don't try solving things you can't 'keep in mind' -
+		If you're doing this, you probably didn't: write clear code, use good habits, or carefully plan
+
+
+
+
+challenge:  how does this apply to solving problems recursively? (think 'base case')

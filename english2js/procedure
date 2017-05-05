@@ -1,0 +1,19 @@
+Remember ‘heuristics’ from before?  This first bit is geared  to give you a heuristic for creating algorithmic solutions to problems presented to you in english
+
+0) understand the question
+
+1) Write your problem in short non-confusing english sentences:
+
+2) Make a little list of anything in there that could be mesured or counted
+
+3) Figure out the possible classifications of input
+
+4) write down the possible input/output types
+
+5) create a skeletal funciton with the sentences where they belong
+
+6) rewrite your sentences until they look like something you know how to code. (keeping in mind the measurable items you have listed, and searching the web to find the JS features that do what you need)
+
+7) once it workds, refactor it so it's prettier
+
+
