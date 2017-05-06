@@ -1,0 +1,118 @@
+→ Passing Data to Views
+=====================================================================
+Rending different views in response to different routes is a great start. However, it's kind of bland if we are only rendering static content in each view. Let's figure out how we can pass data to our views. Update the 2 views to the following…
+→ Index.handlebars
+<p>Welcome to the homepage of {{ title }}...</p>
+→ Other.handlebars
+<p>Welcome to {{ title }}. This is a different route using a different view...</p>
+
+
+And let's also update our HomeController.js file as well and attach the "title" property to the response object and pass that object to our view.
+        → HomeController.js
+exports.Index = function (request, response) { 
+response.title = 'Hello World'; 
+response.render('home/Index', response); 
+};
+exports.Other = function (request, response) { 
+response.title = 'Other'; 
+response.render('home/Other', response); 
+};
+***Notice how we are passing the dynamic data in "title" to the view by attaching it to the response object and we can see that this data is rendered out to our views using the {{ title }} syntax. We can name these properties anything we want (we could have just as easily written response.cheese), the names just have to match in our views e.g {{ cheese }}.
+Now if we were to run our app and navigate to localhost:3000 and localhost:3000/other we can see the different views being used rendering our data
+These properties are also available to our layouts files as well. So if we wanted to we could update our Main.handlebars file to display the title in the <title> tag found in the <head> section of our HTML document…
+
+
+
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>{{title}}</title> 
+</head> 
+<body>
+{{{body}}}
+</body> 
+</html>
+
+
+
+
+It is worth noting that it is probably not the best idea to add individual properties directly onto the response object (which could get pretty messy and unmaintainable pretty quick) so let's pull all of our data into a single object that we'll attach to the response. We'll call this object "pageInfo." So let's update our controller to look like the following…
+
+
+exports.Index = function (request, response) {
+response.pageInfo.title = 'Hello World'; 
+response.render('home/Index', response.pageInfo); 
+};
+exports.Other = function (request, response) { 
+response.pageInfo.title = 'Other';
+response.render('home/Other', response.pageInfo);
+ };
+
+
+Fortunately, we don't have to do anything as far as updating our views go. This is one of the nice things about separating different areas of functionality out into different places.
+Obviously this is just a simple example. In a more complex application it would be here in our controllers where we might use a model object to connect to a database and get the data back from there. But that's another tutorial for another day.
+=====================================================================
+Partial Views
+=====================================================================
+
+
+The express-handlebars module also supports "partial views." 
+
+
+
+
+→ What is a partial view? 
+=====================================================================
+A partial view is merely part of a view within another view. That is, it's a subset of HTML markup within a larger container layout. So an example of this might be a menu partial view with a list of links like "Home," "About Us," "Contact," and others of the sort. This menu partial view can be referenced (included) in a larger view containing the <html> and <body> elements along with any other outer container <div> elements.
+You may have seen the concept of partial views utilized in various way with other web languages. For example, you might see something like within another PHP file to include a menu. ASP.NET web forms has user cotrol .ascx files and ASP.NET MVC has it's own implementation of partial views as well. They're pretty common.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+So to do a partial with Handlebars create a folder in the views directory called "partials" and make a file called 
+→ Menu.handlebars with the following in it…
+
+
+<ul> 
+<li>
+<a href="/">Home</a>
+</li> 
+<li>
+<a href="/about">About</a>
+</li> 
+<li>
+<a href="/contact">Contact</a>
+</li> 
+</ul>
+
+
+And you can include a partial view within your layout by using the {{> Menu}} syntax (with the right angle bracket). So in our Main.handlebars ;layout we can have the following...
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>{{title}}</title> 
+</head> 
+<body>
+{{> Menu}}
+{{{body}}}
+</body> 
+</html>
+
+
+We just need to make sure that we use the correct name of our partial view. They need to match.
+Like with layouts, partial views are also able to handle data passed to them from the controller code as well, so we could really put whatever we want in them. Can't complain about that!
