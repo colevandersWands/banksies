@@ -1,0 +1,38 @@
+Finally, lettuce refactor the code taking advantage of javascript for loops' ability to iterate through objects:
+
+	if (property is not undefined) {
+		if (property is right type) {
+			message += 'all good'
+		} else {
+			property = fallback 
+			message += 'type was bad, replaced'
+		}
+	} else {
+		property = fallback
+		message += 'prop was absent, fallback inserted'
+	}
+	if (property is not in schema) {
+		message += 'extra property detected'
+	}
+
+----------------------------------------------------------------
+
+	for (property in object) {
+		if (property is in schema) {
+			if (property is right type) {
+				message += 'all good'
+			} else {
+				property = fallback 
+				message += 'type was bad, replaced'
+			}
+		} else {
+			property = fallback
+			message += 'prop was absent, fallback inserted'
+		}
+		if (property is not in schema) {
+			message += 'extra property detected'
+		}
+	}
+
+----------------------------------------------------------------
+
