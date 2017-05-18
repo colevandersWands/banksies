@@ -1,19 +1,19 @@
-Remember ‘heuristics’ from before?  This first bit is geared  to give you a heuristic for creating algorithmic solutions to problems presented to you in english
+Here's a rough procedure you can use to tackle a coding challenge.  Feel free to mix and match, add or skip steps.  This is just a place to get started.
 
-0) understand the question
+0) Understand the question, rephrase it until you get it.
 
-1) Write your problem in short non-confusing english sentences:
+1) Write the problem in short non-confusing english sentences. The more and the shorter the better.  In general this will bring your english closer to pseudocode and make the transition to coding simpler.
 
-2) Make a little list of anything in there that could be mesured or counted
+2) Make a little list of anything that could be mesured or counted.  These will become the list of potentially important variables you'll need to include in your solution.
 
-3) Figure out the possible classifications of input
+3) Describe the possible types of inputs. i.e Even or Odd. String, Integer, or undefined. etc.    
 
-4) write down the possible input/output types
+4) Write down some input/output pairs that cover all the types of inputs you can expect.
 
-5) create a skeletal funciton with the sentences where they belong
+5) Create a skeletal function (all necessary variables declared, return value, args, ...) filled with your short senteces where the logic would go.
 
-6) rewrite your sentences until they look like something you know how to code. (keeping in mind the measurable items you have listed, and searching the web to find the JS features that do what you need)
+6) Refactor your sentences, replacing them with javascript one at a time as they look like something you know how to code.  Repeat
 
-7) once it workds, refactor it so it's prettier
+7) Once it works, enter optional refactor phase.
 
 

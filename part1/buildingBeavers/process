@@ -1,0 +1,22 @@
+so how do design an application from scratch:  data + interaction
+
+	-0) what data will the app be storing and manipulating?
+			beaver accounts {name, age, sex, spottedhistory, tracked, ...}
+		What interactiosn do you want it to support?
+			a user can CRUD these beaver records
+
+	Your development decisions follow from satisfying these initial design decisions.
+	
+	procedure:
+		So let's try this out with this week's prompt:
+			0.1) write all the user stories you want to have
+			0.2) sort them by dependancy
+			0.3) choose the core and proceed
+			1) draw a wireframe with all the interactions you want
+				(untrack all, add beaver, add location, track/untrack single, ... for that core)
+			2) let's draw a model of our data and wireframe as per apps0
+			3) let's make the mvc chart for this core
+			3.1) and make the diagram for this as per apps0
+			3.2) make another diagram that adds on next deployment feature
+			3. ... ) have the whole 'deployment schedule'
+			4) Code it!

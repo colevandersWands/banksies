@@ -1,0 +1,11 @@
+- undefined -> 
+- variable tracing -> if you're having trouble with a variable (unexpected value, undefined, ...), go to the line the error is appearing at and do two things recursively:
+	1) inspect it (with any of your tools)
+	2) find its most recent usage (passed as an arg, incremented, ...)
+	At some point you'll come accross either one instance that is confusing preceded by one that isn't, or the first use of the variable (either a bad assignment or no assignment)
+- input/outpus -> if you can't tell what's going on AT ALL and don't even know where to begin logging, try running a good spread of inputs and capture the outputs.  you may be able to deduce what it's doing and from there how to fix it.
+- read the documentation -> many times you've done everything 'right' but a feature/module/api you're using doesn't work like you thought it did.
+- run updates -> modules get deprecated, runtimes get upgrades, all code is living and human maintained
+- read git issues and stackoverflow -> this gets harder the more complicated the project.  no one has had exactly your problem and it can take a fair bit of deducing to figure it out.
+- read git issues -> When i'm having trouble with a module I often find that it's a problem with the module.  someone has usually recommended what patch or version or similar module to use, or even written nice scripts that do the annoying console bits for you.  (prime example: NVM)
+- read the resources section ->  there's some good stuff in there.

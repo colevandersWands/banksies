@@ -1,5 +1,7 @@
 /* 
-4) write down the possible classifications input/output types
+4) Write down some input/output pairs that cover all the types of inputs you can expect:
+
+- let's assume we'll always be getting strings
 
 [not a word -> "leave me alone"]
 [is a word -> t/f]

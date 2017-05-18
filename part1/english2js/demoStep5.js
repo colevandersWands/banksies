@@ -1,4 +1,5 @@
-// 5) create a skeletal funciton that addresses classes of inputs and outputs	
+// 
+// 5) Create a skeletal function filled with your short senteces where the logic would go:
 
 var isItPalindrome = function(stringInput) {
 	// is a word

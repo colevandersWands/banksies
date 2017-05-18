@@ -1,0 +1,15 @@
+Debugging is something you do once your code is running and doesn't work right.  but there's a lot you can do to avoid that.
+
+"plan twice, log once"
+
+Prebugging
+	- make your code 'transparent'
+	- debugging is continuous from the first function to the final product.  always check that it works before adding or modifying. (see above: assume nothing, question everything)
+	- always write readable code.  have your bugs come from misuse of language, confusion with the challenge, ... not from confusion with your own code
+	- build in breakpoints, debuggers, and console.logs where you anticipate problems.  both reminding your future self that this might be a tricky spot and saving it the time of doing this
+
+Debugging
+	- tools: debugger, console.log, inspector
+	- never assume anything.  about how your code works, about what an object looks like, ... console.log or debugger everything
+	- check the resources -> <- do that
+

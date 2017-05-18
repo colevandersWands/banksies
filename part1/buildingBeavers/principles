@@ -1,0 +1,12 @@
+principles:
+	- big picutre drives planning, don't get caught up in or driven off course by implementations
+	- distinguish between features and core
+	- think in terms of user behavior 
+	- think in terms of data management
+	- the app is the structure, not the implementation
+	- development is not coding, it's efficeintly creating automated solutions run over the internet.
+	why write from scratch when wordpress will do?
+
+
+
+

@@ -1,4 +1,5 @@
-// 7) replace your pseudocode line-by-line
+// 
+// 6 continued) replace your pseudocode line-by-line
 
 
 /* while decided == false				*/

@@ -1,12 +1,13 @@
-// 6) place the original sentences and rewrite your sentences until they look like something you know how to code. (keeping in mind the measurable items you have listed)
+// 
+// 6) Refactor your sentences, replacing them with javascript one at a time as they look like something you know how to code.
 
 var isItPalindrome = function(stringInput) {
 	if (/* stringInput is only letters */) {
 		var palindromeStatus;
-		/* do the outer two letters match? */// restate the problem
+		/* do the outer two letters match? */// restate the problem 
 		/* ------------------------------- */// find a doable step that looks like part of the solution
 		/* do the outer two letters match? */
-		/* are there other letters?        */
+		/* are there other letters left?   */
 		/* ------------------------------- */// what do I do now that I've checked if they match?
 		/* do the outer two letters match? */
 		/* 	   if they don't, set to false */
