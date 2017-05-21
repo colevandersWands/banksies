@@ -10,3 +10,21 @@ function addition(a, b) {
 // Moving forward, the 'correct answer' a test is expecting will be a return value of the right type.
 //  This might be an integer, an array, or even an object that satisfies your schema.
 
+function schematizer(scheme, op) {
+	// ignore inputs and return something of the right type
+	var schemeReturned = {
+		name: {
+			type: 'string',
+			fallback: 'ackermann'
+		},
+		numArgs: {
+			type: 'number',
+			fallback: 2
+		},
+		operation: {
+			type: 'function',
+			fallback: function(){return '1337FAIL'}
+		}
+	};
+	return ['all good', schemeReturned]	;
+}
