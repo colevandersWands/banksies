@@ -11,9 +11,9 @@
 		var tested = testee(4, 5);
 		var message = '';
 		if (tested == 9) {
-			tested = 'success';
+			message = 'success';
 		} else {
-			tested = 'failure';
+			message = 'failure';
 		};
 		return message;
 	}
