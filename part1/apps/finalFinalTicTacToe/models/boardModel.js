@@ -7,17 +7,19 @@ var boardModel = {
 	getBoardState: function() {
 			return this.boardState;
 		},
-	addMove: function(row, column, nextPlayer) {
-			var success = true;
+	// consumes callback
+	addMove: function(row, column, nextPlayer, cb) {
+			var err;
 			if(this.boardState[row][column] == null) {	
 				if(nextPlayer) {
 					this.boardState[row][column] = 'x';
 				} else {
 					this.boardState[row][column] = 'o';
 				};
+				err = false;
 			} else {
-				success = false;
+				err = true;
 			};
-			return success;
+			cb(err);
 		}
 	};
