@@ -10,13 +10,6 @@
 // 			the returned object has access to everything in the module file
 //		    this is an example of a closure
 
-const express = require('express');
-const app = express();
-
-
-app.listen(3000, () => {
-  console.log('listening on 3000');
-});
 
 // modify this 'require' statement to call the right example
 const howdy = require('./howdy6');
