@@ -1,5 +1,5 @@
 var initializeView = {	
-	buildBoard: function(cb) {
+	buildBoard: function() {
 		var board = document.getElementById('ticTacBoard');
 		var row;
 		var cell;
