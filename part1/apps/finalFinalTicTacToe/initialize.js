@@ -9,6 +9,6 @@ function initialize() {
 	playerModel.setPlayerState(firstPlayer);
 	controller.addModel(boardModel);
 	controller.addModel(playerModel);
-	controller.setView(gameplayView);
+	controller.setView(gameplayViewBrowser);
 	initializeView.buildBoard();
 };

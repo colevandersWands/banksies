@@ -1,5 +1,7 @@
+// will be mongoose
 var boardModel = { 
 	name: 'boardState',
+	// will be mongo
 	boardState: [],
 	setBoardState: function(newState) {
 			this.boardState = newState;
