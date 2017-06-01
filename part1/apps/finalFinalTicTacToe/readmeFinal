@@ -14,4 +14,4 @@ file structure:
    |- tictactoe.css
 
 
-('app.js' and 'routes.js' can be combined into one file called 'server.js' when you're working in node)
+('app.js' and 'routes.js' can be combined into one file called 'server.js' when you're working in node) 

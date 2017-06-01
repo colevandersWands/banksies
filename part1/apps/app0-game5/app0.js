@@ -27,7 +27,6 @@ function play(box) {
 	};
 };
 
-
 function populateBoard() {
 	var board = document.getElementById('ticTacBoard').children[0].children;
 	var row;
