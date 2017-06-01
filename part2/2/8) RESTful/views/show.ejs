@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MONGODEX</title>
+    </head>
+    <body>
+        <h2>Here is more information about <%= personinfo.fullName %> </h2>
+        <div> <%=personinfo.fullName%> </div>
+        <div> <%=personinfo.email%> </div>
+        <div> <%=personinfo.address%> </div>
+        <form action="/persons/edit/<%=personinfo._id%>" method="GET">
+            <button type="submit" id="Edit">Edit</button>
+        </form>
+        <form action="/persons/delete/<%=personinfo._id%>" method="POST">
+            <button type="submit" id="detele">Delete</button>
+        </form>
+    </body>
+</html>

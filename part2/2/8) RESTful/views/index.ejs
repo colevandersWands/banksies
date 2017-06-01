@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MONGODEX</title>
+    </head>
+    <body>
+        <div>This page will contain a list with all saved persons</div>
+        <ul class="persons">
+            <% for(var i=0; i<persons.length; i++) {%>
+                <li class="persons">
+                    <span> <%= persons[i].fullName %></span>
+                    <span> <%= persons[i].email %></span>
+                    <span> <%= persons[i].address %></span>
+                    <span> <%= persons[i]._id %></span>
+                    <a class="button" href = <%= "/persons/show/"+persons[i]._id %> >View details</a>
+                </li>
+                <% } %>
+            </ul>
+            <form action="/persons/new" method="GET">
+                <button type="submit">Add a person</button>
+            </form>
+        </body>
+    </html>

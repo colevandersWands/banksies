@@ -1,0 +1,15 @@
+ongoing express-node
+	made by george to explain it all
+
+0,1,2,3,4
+	our read-spec-write series
+	0 - intro to node/express basics
+	1 - expressed tic tac toe
+	2 - mongo, mongoose
+	3 - sessions and cool apply things
+	4 - experiments in organization
+	5 - authentication
+
+express-demo
+	a great progressive node/express intro
+	extra read-spec-write
