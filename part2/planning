@@ -1,3 +1,17 @@
+all must be taught around request/response cycle
+	server is a function:
+		- args: http request
+		- return: http response
+		- behavior: use the information contained in the http request object to build an http response object. then send that response out over the interwebs.  essentially a giant series of ifs, else ifs, and else's
+		- purpose: allow users in the outside world to access your data (websites, movies, ebooks, whatever) remotely, while still controling how they can interact with it. (can they read only, read and write, can all users see all things?)
+	what is the request/response cycle
+		demo on board
+		mention pure node
+		then express
+		then res and req
+		then middleware and handlers
+	http anatomy
+
 
 0
 	super basic hello world

@@ -1,0 +1,21 @@
+assorted introductions and simple files
+CRUD.  these words
+
+express' website has very good resources for learning express. good beginner and advanced tuts, also very helpful documentation
+	https://expressjs.com
+
+all only url stuff.  no html generated requests yet
+	middleware intro
+	handlers intro
+	importing 
+	calculators
+		pure middleware
+		using model of operations as in schemadcalc
+			require model
+		intro crud using 
+		using handlers
+		handlers + model
+		router out into app and routes and model
+
+
+error handling?
