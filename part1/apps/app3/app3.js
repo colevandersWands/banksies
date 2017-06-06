@@ -4,7 +4,9 @@
 // own properties, but it'll make the next step simpler.
 
 var ticTappToe = {
-	nextPlayer: true,
+	// this is like this because javascript is annoying.
+	// later it will just be true or false again.  ignore this
+	nextPlayer: {state:true},
 
 	boardState: [
 			[null, null, null],
@@ -21,12 +23,12 @@ var ticTappToe = {
 		var row = box.parentElement.getAttribute('row');
 		var column = box.getAttribute('column');
 		if(boardNow[row][column] == null) {	
-			if(playerNow) {
+			if(playerNow.state) {
 				boardNow[row][column] = 'x';
 			} else {
 				boardNow[row][column] = 'o';
 			}
-			playerNow = !playerNow;
+			playerNow.state = !(playerNow.state);
 		} else {
 			alert('grow up. you can\'t do that')
 		};
