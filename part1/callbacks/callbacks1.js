@@ -4,6 +4,7 @@
 function higherOrder(argFunc) {
 	console.log('im high');
 	argFunc();
+	return argFunc;
 };
 
 function argumentFunction() {
@@ -11,5 +12,6 @@ function argumentFunction() {
 };
 
 higherOrder(argumentFunction);
+console.log(higherOrder(argumentFunction));
 
 

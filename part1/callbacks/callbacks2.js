@@ -6,7 +6,7 @@ function higherOrder(stringToPrint, argFunc) {
 };
 
 function argumentFunction(string) {
-	console.log(stringToPrint);
+	console.log(string);
 };
 
 higherOrder('im high', argumentFunction);
