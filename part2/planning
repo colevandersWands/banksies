@@ -11,7 +11,32 @@ all must be taught around request/response cycle
 		then res and req
 		then middleware and handlers
 	http anatomy
+	hit router from the start
+		not THAT complicated
+		already seen controller objects
+		and module.exports
 
+whats http
+whats request/response
+server's a function
+app.js
+app.use
+middleware stuffs
+	loggin
+router
+restful routes - data + user interaction
+
+tests
+error handling - middleware functions after routes
+auto restarting
+
+|
+|
+|
+|
+|
+
+env vars
 
 0
 	super basic hello world

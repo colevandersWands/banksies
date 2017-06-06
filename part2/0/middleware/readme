@@ -38,6 +38,7 @@ middleware:
 	config, errors, 
 	res.locals only. (ap.loc persists between cycles)
 	in app.js
+	auth and sessions
 
 handlers:
 	res building
