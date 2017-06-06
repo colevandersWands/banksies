@@ -6,7 +6,7 @@ function callBack(err, argument) {
 	// if there was an error, don't use arguments
 	//   it would break your code
 	if(err) {
-		console.log('result aint no number');
+		console.log(err);
 	} else {
 		console.log(argument);
 	};

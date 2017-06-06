@@ -17,3 +17,7 @@ function callBack(stringToPrint) {
 
 higherOrder(4, 5, callBack);
 higherOrder(4, '5', callBack);
+
+function notHigherOrder()
+
+function followup()

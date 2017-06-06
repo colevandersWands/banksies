@@ -8,7 +8,7 @@ var module = require('./moduleSide91');
 
 module.higherOrder(4, 5, (err, argument) => {
 	if(err) {
-		console.log('result aint no number');
+		console.log(err);
 	} else {
 		console.log(argument);
 	};
@@ -16,7 +16,7 @@ module.higherOrder(4, 5, (err, argument) => {
 
 module.higherOrder(4, '5', (err, argument) => {
 	if(err) {
-		console.log('result aint no number');
+		console.log(err);
 	} else {
 		console.log(argument);
 	};
@@ -37,3 +37,8 @@ module91: object
 						else do the math. then calls cb with err and result
 			purpose:  an addition module
 */
+
+
+
+
+

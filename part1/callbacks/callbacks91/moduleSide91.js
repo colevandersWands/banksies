@@ -8,7 +8,7 @@ module9.higherOrder = function(arg1, arg2, cb) {
 	if((typeof arg1 == 'number') &&  (typeof arg2 == 'number'))	{
 		result = arg1 + arg2;
 	} else {
-		err = true;
+		err = 'result aint no number';
 	};
 	cb(err, result);
 };
