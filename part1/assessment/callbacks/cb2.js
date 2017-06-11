@@ -15,4 +15,7 @@ function importedModule(number1, number2) {
 };
 
 var resultCarrier = importedModule(3, 4);
-devSideCode(resultCarrier);
+devSideCode(resultCarrier); // -> 7
+
+var resultCarrier = importedModule(3, 'tim');
+devSideCode(resultCarrier); // -> argument is not a number

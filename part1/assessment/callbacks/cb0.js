@@ -13,4 +13,6 @@ function moduleSide(number1, number2, cb) {
 	cb(err, result);
 };
 
-moduleSide(5, 4, devSide);
+moduleSide(5, 4, devSide);  // -> 9
+
+moduleSide('tim', 4, devSide);  // -> arguments arent numbers
