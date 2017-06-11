@@ -11,10 +11,6 @@ var model = {
 		// save it to the gameboard and update playerstate.  
 		// else alert
 		return undefined;
-	},
-	deleteEverything: function() {
-		///
-		return 'success';
 	}
 };
 
@@ -25,6 +21,7 @@ var view = {
 		return undefined;
 	}
 };
+
 // handle 'game play'.
 var controller = {
 	play: function(box) {  //  when a user clicks the board, the app does the right thing
@@ -33,8 +30,3 @@ var controller = {
 		return undefined;
 	}
 };
-
-
-
-
-

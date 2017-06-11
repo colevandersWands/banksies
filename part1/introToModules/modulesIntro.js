@@ -12,6 +12,26 @@
 
 
 // modify this 'require' statement to call the right example
-const howdy = require('./howdy0');
+const howdy = require('./howdy6');
 
+
+	// console.log(howdy) // 0
 	console.log(howdy)
+
+var exportedObject = {};
+
+module.exports = exportedObject;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

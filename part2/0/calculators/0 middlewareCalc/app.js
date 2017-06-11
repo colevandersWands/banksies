@@ -3,6 +3,10 @@
 const express      = require('express');
 const app         = express();
 
+// middlewares are anything of the form 'app.use' or 'app.set'.
+// they are used for local app configuration and operations
+// don't touch the 'res' object except for 'res.locals' (which doesn't get sent at the end of the cycle)
+
 // not specifying a source route tells express to pass every request through here
 app.use(function (req, res, next) {
     console.log('-------------- \'hi\' says the calculator ---------------');

@@ -1,6 +1,6 @@
 // we're now pretending this HOF is a module you import into your app
 
-var module9 = {};
+var module91 = {};
 
 module9.higherOrder = function(arg1, arg2, cb) {
 	var err = false;
@@ -13,4 +13,4 @@ module9.higherOrder = function(arg1, arg2, cb) {
 	cb(err, result);
 };
 
-module.exports = module9;
+module.exports = module91;

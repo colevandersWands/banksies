@@ -1,13 +1,41 @@
-//  app.js will be the entry point for now
-//  it'll have these things in this order:
+// import all needed modules
+// just use const for now, we'll cover why later
+const express      = require('express');
+const app         = express();
 
-// 1) all module requires
+const operationModel = require('./models/operationModel');
 
-// 2) all configuration middleware calls
-//		body parser, ejs, ...	
+app.use(function (req, res, next) {
+    console.log('-------------- \'hi\' says the calculator ---------------');
+	res.locals.result = {callbackMessage: '', value: 0000};
+    next();
+});
 
-// 3) all router imports
+// a request will hit every middleware it matches
+app.use('/add/:arg1/:arg2', function (req, res, next) {
+   	res.locals.result.value = parseInt(req.params.arg1) + parseInt(req.params.arg2);
+   	console.log('in addition');
+	next()
+});
 
-// 4) server connection
+app.use('/:operation/:arg1/:arg2', function (req, res, next) {
+  console.log('in ' + req.params.operation);
+	var a = parseInt(req.params.arg1);
+	var b = parseInt(req.params.arg2);
+	var callbackArray = operationModel.getOperation(req.params.operation);
+  if (callbackArray[0] == 'success') {
+    res.locals.result.value = callbackArray[1].operation(a, b);
+  };
+  res.locals.result.callbackMessage = callbackArray[0];
+	next();
+});
 
+app.use(function (req, res, next) {
+    console.log('----------------------- leaving server --------------------------\n');
+    res.send(res.locals.result);
+});
+
+app.listen(3000, function() {
+    console.log('listening on 3000');
+})
 

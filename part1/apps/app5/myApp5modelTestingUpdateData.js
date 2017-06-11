@@ -18,6 +18,7 @@ var model = {
 	}
 };
 
+
 // to manipulate the DOM with fresh data
 var view = {
 	populateBoard: function(boardNow) {  // so players can see what they've done
@@ -25,6 +26,7 @@ var view = {
 		return undefined;
 	}
 };
+
 // handle 'game play'.
 var controller = {
 	play: function(box) {  //  when a user clicks the board, the app does the right thing
@@ -33,8 +35,3 @@ var controller = {
 		return undefined;
 	}
 };
-
-
-
-
-
