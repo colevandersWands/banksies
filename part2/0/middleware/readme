@@ -1,5 +1,6 @@
 middlware are simply functions your server can use
-app.use configures the express app
+app.use and app.set configures the express app
+
 
 
 good articles:  - sort them
