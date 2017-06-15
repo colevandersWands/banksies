@@ -7,3 +7,7 @@ make the initialize function more clear, or replaced, or gotten rid of
 domcontent initialization analogy is too much?  (see above)
 
 in 6 or 7 make the controller extract row and column from the box
+
+remove dom calls from controller before 9
+
+write exercise file for consoling project

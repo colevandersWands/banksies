@@ -1,0 +1,22 @@
+
+// routes =>
+/* ------------------- INDEX -------------------*/
+// GET  "/"                     => show all beaver
+
+/* ------------------- CREATE -------------------*/
+// GET  "/beaver"                => Create new Beaver
+// POST "/beaver"                => Create new Beaver
+//                                 Redirect to "/beaver/:id"
+
+/* ------------------- READ -------------------*/
+// GET  "/beaver/:id"             => View Beaver Info with id ...
+
+/* ------------------- UPDATE -------------------*/
+// GET  "/beaver/:id/update"     => update Beaver with id...
+// POST "/beaver/:id/update"     => update Beaver with id...
+//                                 Redirect to "/beaver/:id"
+
+/* ------------------- DELETE -------------------*/
+// GET  "/beaver/:id/delete"     => delete Beaver with id...
+// POST "/beaver/:id/delete"     => delete Beaver with id...
+//                                 Redirect to "/"
