@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
 // middleware defining what sessions do
-app.use(function(req, res) { 
+app.get('/', (req, res) => { 
   console.log(req.cookies.views)
    // if it isn't the first visit on their current cookie
    if (req.cookies.views) { 

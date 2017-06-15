@@ -5,8 +5,6 @@ anOjbect: object
 	properties: 1, initially at least
 		string1: string
 			initialized: 'initial value'
-		stringX: strings. added by the addNewProperty method, the name is dynamically created
-			ex: string2, string3, string4, ... 
 	methods: 3
 		printString: function
 			args: 1
@@ -16,9 +14,9 @@ anOjbect: object
 		modifyString: funciton
 			args: 2
 				newString: new substitute string
-				whichOne: number indicating which property to replace
+				whichOne: number indicating which property's value to replace
 			return: undefined
-			behavior: replaces stringX with newString
+			behavior: replaces stringX's value with newString
 		addNewProperty: function
 			args: 1
 				newProperty: string to add as new property
