@@ -26,12 +26,12 @@ step 2 - app structure:
 	- Projects:  
 
 step 3 - Mongo:  
-
+  
 step 4 - Mongoose:  
-
-step 5 - sessions:
-
-step 6 - Passport:
+  
+step 5 - sessions:  
+  
+step 6 - Passport:  
 
 
 
