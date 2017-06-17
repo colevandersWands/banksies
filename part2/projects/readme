@@ -5,9 +5,7 @@ each one builds on the last, you can always make the next one by refactoring the
 each project introduces a new concept.
 
 in each project folder you'll find:
-	- project description and learning objectives
-	- list of resources to study these objectives
-	- link to example finished code
+	- link to project home page
 	- empty file for your dev plan
 	- empty directory for your documentation
 	- empty directory for your code
