@@ -6,7 +6,7 @@ var port        = 3000;
 app.use(express.static(path.join(__dirname, './public')));
 
 app.get('/', function(req, res){
-	res.render('lol.html');
+	res.render('./lol.html');
 });
 
 app.get('/new', function(req, res){
