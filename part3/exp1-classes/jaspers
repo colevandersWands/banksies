@@ -1,0 +1,9 @@
+super
+extends
+state
+prop
+bind
+promises
+modules
+	npm install from local file
+	any folder with a valid package.json
