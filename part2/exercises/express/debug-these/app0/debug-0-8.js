@@ -3,7 +3,7 @@ var app 		= express();
 var port        = 3000;
 var http 		= require('http');
 
-function listen() {
+app.listen = function() {
   var server = http.createServer(this);
   return server.listen.apply(server, arguments);
 };
