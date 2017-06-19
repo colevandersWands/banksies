@@ -3,10 +3,10 @@ var app 		= express();
 var path 		= require('path');
 var port        = 3000;
 
-app.use(express.static(path.join(_dirname, '../public')));
+app.use(express.static(path.join(_dirname, './public')));
 
 app.get('/', function(req, res){
-	res.render('./index.html');
+	res.render('./lol.html');
 });
 
 app.get('/new', function(req, res){
