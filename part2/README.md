@@ -1,17 +1,17 @@
 [BRACE YOURSELVES!](https://docs.google.com/presentation/d/1lq7-0p1bjT0Iqp8WCCdCy_VNNAcbpr6vogqcsLdo4Hk/edit#slide=id.g1d1e49e639_0_5)    express is coming  
   
-step 0 - foundations: 
-	- Study Stuff:   
-		- resources/express/[classBuildup, middleware-series, george-explains resources.md]  
-		- resources/express/app-templates/template-0
-		- resources/ejs/[boardBuilder, resources.md]  
-		- colt steele (if you're into that)  
-		- resources/the-internet/resources.md  
-		- being-a-developer/*   
-	- Assessments:  
-		- 0
-	- Projects:  
-		- 0-4
+step 0 - foundations:   
+  - Study Stuff:   
+    * resources/express/[classBuildup, middleware-series, george-explains resources.md]  
+    * resources/express/app-templates/template-0
+    * resources/ejs/[boardBuilder, resources.md]  
+    * colt steele (if you're into that)  
+    * resources/the-internet/resources.md  
+    * being-a-developer/*   
+  - Assessments:  
+    * 0
+  - Projects:  
+    * 0-4  
   
 step 1 - restful & crud:  
 	- Study Stuff:  
