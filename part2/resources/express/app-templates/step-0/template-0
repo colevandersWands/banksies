@@ -1,0 +1,44 @@
+/*
+this is the template we are asking you to follow for the first step of learning express
+up here you can write a sentence or two describing your app
+*/
+
+----------------------------------------------
+all 'require' statements go in this top section
+----------------------------------------------
+
+----------------------------------------------
+declare here any local variables you will need.
+maybe a 'var DB = [];' or 'var playerState = true;'
+also initializations like 'var app = express();'
+----------------------------------------------
+
+----------------------------------------------
+all middleware come next (except for 404's0.  this is anything 'app.set' or 'app.use'.  
+here you'll set view engines, use body parser, log traffic, ... 
+anything that configures the app or helps manage it
+----------------------------------------------
+
+----------------------------------------------
+all handlers go here.
+anything with 'app.get' or 'app.post'
+this section is the 'public facing logic' of your program.
+The API if you want to use vocabulary
+----------------------------------------------
+
+----------------------------------------------
+your '404' error message goes here.
+because of the way middleware works in express,
+this function will only be executed if no handlers were entered.
+----------------------------------------------
+
+----------------------------------------------
+The final piece of your app will be the server connection
+----------------------------------------------
+
+
+
+
+
+
+

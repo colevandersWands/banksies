@@ -3,6 +3,7 @@
 step 0 - foundations: 
 	- Study Stuff:   
 		- resources/express/[classBuildup, middleware-series, george-explains resources.md]  
+		- resources/express/app-templates/template-0
 		- resources/ejs/[boardBuilder, resources.md]  
 		- colt steele (if you're into that)  
 		- resources/the-internet/resources.md  
