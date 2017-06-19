@@ -1,3 +1,5 @@
+[BRACE YOURSELVES!](https://docs.google.com/presentation/d/1lq7-0p1bjT0Iqp8WCCdCy_VNNAcbpr6vogqcsLdo4Hk/edit#slide=id.g1d1e49e639_0_5)    express is coming  
+  
 step 0 - foundations: 
 	- Study Stuff:   
 		- resources/express/[classBuildup, middleware-series, george-explains resources.md]  
@@ -32,6 +34,7 @@ step 4 - Mongoose:
 step 5 - sessions:  
   
 step 6 - Passport:  
+
 
 
 
