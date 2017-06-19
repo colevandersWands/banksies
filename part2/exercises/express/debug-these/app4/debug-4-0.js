@@ -5,7 +5,7 @@ var port        = 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../public'), {index: false}));
 
 app.get('/', function(req, res){
 	res.send('go to \/new\/(any word you like) to see that word displayed in the browser');
