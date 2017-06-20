@@ -1,10 +1,19 @@
-webpack:
-	say nothing
+advanced js:
+    skip prototype inheritance
+    classes
+    super/extends
+    closures(simple) + bind
+pre-react:
+    promises
+    babel
+    lodash
+    moduling
+react:
+    the series
+    sort out these two: 
+        the bind thing (when relevant)
+        the parenthesis in brackets thing
 
-boilerplate:
-	render react and hotloading
-	
-	
 react:
 	0 - classes and babel
 		see jasper in classes
@@ -49,5 +58,71 @@ extra stuff:
 	* webstorm will adjust files to match dependencies when things are shifted
 	* setState - to overcome all children being rerendered when parent state updated
 
+other thoughts:
+    from sketch to components
+    how much time to spend on preact?
+
+    
+
+
+
+
+import React from 'react';
+ 
+export default class App extends React.Component {
+    constructor() {
+        super();
+        this.increaseNumber = this.increaseNumber.bind(this);
+        this.state = {
+            number: 0
+        };
+    }
+    increaseNumber() {
+        this.setState({
+            number: this.state.number + 1
+        });
+    }
+  render() {
+    return (
+      <div>
+                <p>The number is {this.state.number}</p>
+                <button onClick={this.increaseNumber} />
+                <MyComponent name="Jasper" />
+                <IncreaseButton incrementation={10} />
+      </div>
+    )
+  }
+}
+ 
+const MyComponent = (props) => {
+    return (
+        <div>
+            Hello {props.name}
+        </div>
+    );
+};
+ 
+class IncreaseButton extends React.Component {
+  constructor() {
+    super();
+        this.increaseNumber = this.increaseNumber.bind(this);
+    this.state = {
+        value: 0
+        };
+  }
+    increaseNumber() {
+        this.setState({
+            value: this.value.number + this.props.incrementation
+        });
+    }
+  render() {
+    return (
+        <div>
+                <div>Current Value: {this.state.value}</div>
+                <button onClick={this.increaseNumber} />
+            </div>
+        );
+  }
+}
 
 

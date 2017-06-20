@@ -6,7 +6,7 @@ var port = 3000;
 
 app.use(function(req, res, next){console.log('yo'); next()})
 app.use('/tate', express.static(path.join(__dirname, './paintings/tate/')));
-app.use('/tate', express.static(path.join(__dirname, './paintings/tate')));
+app.use('/tate', express.static(path.join(__dirname, './paintings/tate/')));
 
 app.get('/tate', (req, res) => {
 	res.sendFile(path.join(__dirname, './public/tate2.html'));
