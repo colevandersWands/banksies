@@ -46,7 +46,7 @@ var operationModel = {
         //var myObj = opCopier(newOperation);
         var addToSchemaCalc = false;
         var message = "";
-        var myObj = opCopier(newOperation);
+        var myObj = {};
         for (key in this.schema){
             if (key in newOperation){
                 var type = typeof(newOperation[key]);
