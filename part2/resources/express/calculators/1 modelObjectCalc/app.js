@@ -18,6 +18,7 @@ app.use('/add/:arg1/:arg2', function (req, res, next) {
 	next()
 });
 
+// see above comment.  if you access '/add/*', it will do math twice
 app.use('/:operation/:arg1/:arg2', function (req, res, next) {
   console.log('in ' + req.params.operation);
 	var a = parseInt(req.params.arg1);

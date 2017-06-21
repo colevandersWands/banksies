@@ -2,6 +2,34 @@
 
 var operationModelCallbacks = {
     operationsDB: {
+        add: {
+            name: 'add',
+            numArgs: 2,
+            operation: function(a, b) {
+                return a + b;
+            }
+        },
+        subtract: {
+            name: 'subtract',
+            numArgs: 2,
+            operation: function(a, b) {
+                return a - b;
+            }
+        },
+        mulitply: {
+            name: 'multiply',
+            numArgs: 2,
+            operation: function(a, b) {
+                return a * b;
+            }
+        },
+        divide: {
+            name: 'divide',
+            numArgs: 2,
+            operation: function(a, b) {
+                return a / b;
+            }
+        }
     },
     schema: {
         name: {
@@ -49,13 +77,15 @@ var operationModelCallbacks = {
         return message
     },
     // allows users to use a given operation
-    getOperation: function(operationName, cb) {
-    	var operationToReturn = this.operationsDB[operationName];
-    	var error = null;
-    	if(operationToReturn == undefined) {
-    		error = 'operation does not exist here';
-    	};
-        cb(error, operationToReturn);
+    getOperation: function(operationName) {
+        var operationToReturn = this.operationsDB[operationName];
+        var message = '';
+        if(typeof operationToReturn == 'undefined') {
+            message = operationName + ' is not an operation';
+        } else {
+            message = 'success';
+        };
+        return [message, operationToReturn];
     }
 };
 
