@@ -40,11 +40,11 @@ modelConstructor.prototype.update = function(id, key, newValue, cb) {
 modelConstructor.prototype.get = function(id, cb) {
 	var err = null;
 	var returner = {};
-	// if(this.db[id] != 'undefined'){
+	if(this.db[id] != 'undefined'){
 		returner = this.db[id];
-	// } else {
-	//	err = 'id does not exist in db';
-	// };
+	} else {
+		err = 'id does not exist in db';
+	};
 	cb(err, returner);	
 };
 modelConstructor.prototype.getAll = function(cb) {

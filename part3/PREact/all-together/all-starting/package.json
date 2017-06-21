@@ -5,6 +5,7 @@
   "main": "index.js",  
   "scripts": {
     "compile": "babel-compile -p es2015 src:lib",
+    "build": "node src/consoleTester.js",
     "start": "node server.js"
   },
   "dependencies": {
