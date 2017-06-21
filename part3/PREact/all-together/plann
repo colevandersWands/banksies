@@ -1,8 +1,7 @@
 simple browser/served - for babeling
 
-not mvc?  
-	this isn't about mimiking react
-	and they know mvc
+mvc frontend app?
+	this isn't about mimiking react architecture
 
 slight dom, just writing to divs
 

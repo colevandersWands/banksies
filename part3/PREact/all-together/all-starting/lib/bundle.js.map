@@ -1,0 +1,34 @@
+{
+  "version": 3,
+  "sources": [
+    "bundle.js"
+  ],
+  "names": [
+    "constructorModule",
+    "require",
+    "BrowserView",
+    "View",
+    "Controller",
+    "BrowserController",
+    "operationSchema",
+    "name",
+    "type",
+    "fallback",
+    "args",
+    "operation",
+    "operationsModel",
+    "brvw",
+    "brcn",
+    "runnin",
+    "browse",
+    "document",
+    "getElementById",
+    "value"
+  ],
+  "mappings": ";;AAAA,IAAIA,oBAAoBC,QAAQ,mBAAR,CAAxB;AACA,IAAIC,cAAcD,QAAQ,qBAAR,CAAlB;AACA,IAAIE,OAAOF,QAAQ,cAAR,CAAX;AACA,IAAIG,aAAaH,QAAQ,0BAAR,CAAjB;AACA,IAAII,oBAAoBJ,QAAQ,iCAAR,CAAxB;;AAEA,IAAIK,kBAAkB;AACrBC,OAAM;AACLC,QAAM,QADD;AAELC,YAAU;AAFL,EADe;AAKrBC,OAAM;AACLF,QAAM,QADD;AAELC,YAAU;AAFL,EALe;AASrBE,YAAW;AACVH,QAAM,UADI;AAEVC,YAAU;AAFA;AATU,CAAtB;AAcA,IAAIG,kBAAkB,IAAIZ,iBAAJ,CAAsBM,eAAtB,CAAtB;AACA,IAAIO,OAAO,IAAIX,WAAJ,CAAgB,WAAhB,CAAX;AACA,IAAIY,OAAO,IAAIT,iBAAJ,CAAsBO,eAAtB,EAAuCC,IAAvC,CAAX;;AAEA;AACA,IAAIE,SAAS,SAATA,MAAS,GAAW;AACtBD,MAAKE,MAAL,CAAYC,SAASC,cAAT,CAAwB,OAAxB,EAAiCC,KAA7C,EAAoDF,SAASC,cAAT,CAAwB,QAAxB,EAAkCC,KAAtF,EAA6FF,SAASC,cAAT,CAAwB,OAAxB,EAAiCC,KAA9H;AACD,CAFD",
+  "file": "bundle.js",
+  "sourceRoot": "../src",
+  "sourcesContent": [
+    "var constructorModule = require('model-constructor');\nvar BrowserView = require('./views/browserView');\nvar View = require('./views/view');\nvar Controller = require('./controllers/controller');\nvar BrowserController = require('./controllers/browserController');\n\nvar operationSchema = {\n\tname: {\n\t\ttype: 'string',\n\t\tfallback: 'akermann'\n\t},\n\targs: {\n\t\ttype: 'number',\n\t\tfallback: 2\n\t},\n\toperation: {\n\t\ttype: 'function',\n\t\tfallback: 'A(x, y)'\n\t}\n};\nvar operationsModel = new constructorModule(operationSchema);\nvar brvw = new BrowserView('yo there ');\nvar brcn = new BrowserController(operationsModel, brvw)\n\n// wrap them in an onclick function\nvar runnin = function() {\n  brcn.browse(document.getElementById(\"first\").value, document.getElementById(\"second\").value, document.getElementById(\"third\").value);\n};\n\n"
+  ]
+}
