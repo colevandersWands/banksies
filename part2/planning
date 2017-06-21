@@ -16,6 +16,21 @@ all must be taught around request/response cycle
 		already seen controller objects
 		and module.exports
 
+part2
+	check up on served tictactoe and the like
+	rebuild paintings from html back
+	introduce middleware
+	calcs through 404 (including callback rewrite)
+	ejs - debugthese, boardbuilder
+	cover req/res cycle
+	cover handlers and body parser
+	crud-rest, beavers
+	start projects
+	documentation reading
+		static serving
+		middlewares
+	
+
 
 https://github.com/olivierkaisin/node-express-router
 
