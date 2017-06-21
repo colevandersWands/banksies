@@ -21,7 +21,10 @@ const operationModel = require('./models/operationModel');
 // 'res.locals' is a socially acceptable global scope variable
 function doMath(opName, a, b) {
   var callbackArray = operationModel.getOperation(opName);
-  // if this confuses you, checkout the schema in the model
+  // if this confuses you try these 3 things
+  //  1: check the return value of operationModel.getOperation
+  //  2: check the schema in operationModel
+  //  3: console.log(callbackArray);
   var opToUse = callbackArray[1].operation;
   var message = callbackArray[0] + ': ' + opName + ' does exist';
   var result = opToUse(a, b);

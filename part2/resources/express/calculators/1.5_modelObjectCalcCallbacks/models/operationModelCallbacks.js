@@ -85,7 +85,7 @@ var operationModelCallbacks = {
         } else {
             message = 'success';
         };
-        return [message, operationToReturn];
+        cb(message, operationToReturn);
     }
 };
 
