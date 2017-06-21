@@ -15,13 +15,26 @@ app.use(function (req, res, next) {
     next();
 });
 
+// specs for a middleware or handler
+//   1: what's the app.type
+//   2: what's the path
+//   3: what happens to the response (or just 'next()' for middleware)
+//   4: behavior
+//   5: purpose
+
+// type: app.use
+// path: 'add/:arg1/:arg2'
+// response: next()
+// behavior: add to res.locals.result.value the result of adding arg1 and arg2
+// purpose: so addition is possible
+
 // res.locals.result is used to store variables. 
 // it doesn't become part of the http response, its just for you in the server
 app.use('/add/:arg1/:arg2', function (req, res, next) {
    	// req.params are by default strings
    	res.locals.result.value = parseInt(req.params.arg1) + parseInt(req.params.arg2);
    	console.log('in addition');
-	next()
+  	next()
 });
 
 app.use('/subtract/:arg1/:arg2', function (req, res, next) {

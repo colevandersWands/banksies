@@ -19,19 +19,25 @@ app.use(function (req, res, next) {
 //     console.log('in /');
 //     next();
 // });
-
 // if first url extension is banana, use this function
 app.use('/banana', function (req, res, next) {
     res.locals.message += 'banana ';
-    console.log('in \/tim');
-    next()
+    console.log('in \/banana');
+    next();
 });
+
+app.use('/*', function (req, res, next) {
+    res.locals.message += '* ';
+    next()
+})
 
 // if first url extension is apple, use this function
 app.use('/apple', function (req, res, next) {
     res.locals.message += 'apple';
-    next()
+    next();
 });
+
+
 
 // if request is of type 'get', use this.
 // (they all are for now, more on this later)

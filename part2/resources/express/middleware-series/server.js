@@ -12,11 +12,11 @@ app.use('/*/:id', function (req, res, next) {
     next()
 });
 
-app.get('/bananas/:id', function (req, res, next) {
+app.use('/bananas/:id', function (req, res, next) {
     res.send('you are seeing a banana with id=' + res.locals.id)
 });
 
-app.get('/apples/:id', function (req, res, next) {
+app.use('/apples/:id', function (req, res, next) {
     res.send('you are seeing an apple with id=' + res.locals.id)
 });
 

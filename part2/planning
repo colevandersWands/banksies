@@ -19,7 +19,9 @@ all must be taught around request/response cycle
 
 https://github.com/olivierkaisin/node-express-router
 
-	finish static project
+	static paintings
+	static battleship
+	rebuild paintings from wireframes
 	cover middleware
 	cover req/res cycle
 	cover handlers and body parser

@@ -79,6 +79,13 @@ app.use('/:operation', (req, res, next) => {
   res.send(error);
 });
 
+app.use((req, res, next) => {
+  var message = 'no home directory';
+  var error = {'404': message};
+  res.send(error);
+});
+
+
 app.listen(3000, () => {
     console.log('listening on 3000');
 })
