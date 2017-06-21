@@ -26,8 +26,10 @@ app.use('/:operation/:arg1/:arg2', function (req, res, next) {
 	var callbackArray = operationModel.getOperation(req.params.operation);
   if (callbackArray[0] == 'success') {
     res.locals.result.value = callbackArray[1].operation(a, b);
+    res.locals.result.callbackMessage = callbackArray[0];
+  } else {
+    res.locals.result.callbackMessage = callbackArray[0];
   };
-  res.locals.result.callbackMessage = callbackArray[0];
 	next();
 });
 
