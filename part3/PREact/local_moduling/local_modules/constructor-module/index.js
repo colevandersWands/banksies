@@ -63,5 +63,8 @@ modelConstructor.prototype.schema = function(checkMe) {
 	// return true or false after comparing checkMe to this.schema
 };
 
+function modelConstructorWrapper(schema) {
+	return new modelConstructor(schema)
+}
 
-module.exports = modelConstructor;
+module.exports = modelConstructorWrapper;

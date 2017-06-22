@@ -15,7 +15,7 @@ app.use(function (req, res, next) {
 app.use('/add/:arg1/:arg2', function (req, res, next) {
    	res.locals.result.value = parseInt(req.params.arg1) + parseInt(req.params.arg2);
    	console.log('in addition');
-	next()
+	  next()
 });
 
 // see above comment.  if you access '/add/*', it will do math twice

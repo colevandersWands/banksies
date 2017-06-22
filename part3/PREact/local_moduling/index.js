@@ -8,7 +8,7 @@ var chairSchema = {
 	}
 };
 
-var chairModel = new constructorModule(chairSchema);
+var chairModel = constructorModule(chairSchema);
 
 var allChairs = [];
 
