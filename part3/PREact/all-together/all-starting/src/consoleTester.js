@@ -1,4 +1,4 @@
-var constructorModule = require('model-constructor');
+var modelConstructor = require('model-constructor');
 var View = require('./views/view');
 var Controller = require('./controllers/calcUser');
 
@@ -16,7 +16,7 @@ var operationSchema = {
 		fallback: 'A(x, y)'
 	}
 };
-var operationsModel = new constructorModule(operationSchema);
+var operationsModel = modelConstructor(operationSchema);
 
 var add = {
     name: 'add',
