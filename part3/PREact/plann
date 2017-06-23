@@ -21,3 +21,5 @@ it'll:
 		exteded controller.doMath
 	draw the result to the screen
 		exteded view.render
+
+a little project to practice some skills you'll want for react
