@@ -22,7 +22,7 @@ react:
 		0 - pure es6 function.  return html -> div, a, ... 
 		1 - class extends
 		2 - render variables
-		we may have elsint problems here
+		we may have eslint problems here
 		explain when 0 vs 1.  0 if only props, one off returns from a function
 		stateless when ever possible
 	2 - single component state - simple buttons
