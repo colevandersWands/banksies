@@ -5,17 +5,17 @@ the handlers will now be like controller methods
 Begin! :
 	1 - index and hardcoded entries -
 			app.js, 
-			index.ejs, 
-			get./
-			dataModel: object
-				properties: 
-					db: object
-						initialized: {0: {datatype}}  
-				methods:
-					getAll: function
-						args: none
-						return: array containing all items in DB
-						behavior: translates db into an array
+				index.ejs, 
+				get./
+				dataModel: object
+					properties: 
+						db: object
+							initialized: {0: {datatype}}  
+					methods:
+						getAll: function
+							args: none
+							return: array containing all items in DB
+							behavior: translates db into an array
 
 	2 - mod out the model
 			1: create a new folder called models
@@ -30,7 +30,7 @@ Begin! :
 			dataModel:
 				properties:
 					nextId: number
-						initialized: 0
+						initialized: 1
 					schema: object
 						initialized: empty object
 				methods:
