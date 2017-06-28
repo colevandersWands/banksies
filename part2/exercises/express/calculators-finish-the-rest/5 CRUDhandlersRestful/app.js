@@ -14,9 +14,6 @@ app.use((req, res, next) => {
 const calcHandlers = require('./controllers/calcHandlers');
 app.use(calcHandlers);
 
-const homeHandler = require('./controllers/homeHandler');
-app.use(homeHandler);
-
 app.use('/:operation', (req, res, next) => {
   console.log('----------- left server from 404 ------------');
   var message = 'path \'' + req.originalUrl + '\' does not exist';

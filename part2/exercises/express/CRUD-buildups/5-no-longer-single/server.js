@@ -19,44 +19,7 @@ app.get("/home", function(req, res){
 })
 
 // Beaver CRUD routes  --------------------------
-app.get("/beavers", function(req, res){
-    res.send('put a new beaver name in the body and submit')
-})
 
-app.post("/beavers", function(req, res){
-    var newId = Beavers.length;
-    var newName = req.body.name;
-    var newBeaver = {id: newId, name: newName};
-    Beavers.push(newBeaver);
-    res.redirect("/beavers/" + newId)
-})
-
-app.get("/beavers/:id", function(req, res){
-    var beaverId = req.params.id
-    var beaverFriends = // all beavers friends with beaver :id
-    res.send({beav: Beavers[beaverId], relations: beaverFriends});
-})
-
-app.get("/beavers/:id/update", function(req, res){
-    var beaverId = req.params.id
-    res.send({beaver: Beavers[beaverId], message: 'modify this beaver in the body'});
-})
-
-app.post("/beavers/:id/update", function(req, res){
-    var beaverId = req.params.id
-    Beavers[beaverId].name = req.body.name
-    res.redirect("/beavers/" + beaverId)
-})
-
-app.get("/beavers/:id/delete", function(req, res){
-    var beaverId = req.params.id
-    res.send({id: beaverId, message: 'confirm deleting this beaver'});
-})
-
-app.post("/beavers/:id/delete", function(req, res){
-    // write the code to delete the selected beaver
-    res.redirect("/")
-})
 
 // Relations CRUD routes -------------------------------------
 app.get("/relations", function(req, res){

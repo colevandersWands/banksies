@@ -10,6 +10,8 @@ app.use((req, res, next) => {
 
 const calcHandlers = require('./controllers/calcHandlers');
 app.use(calcHandlers);
+const beaverHandlers = require('./controllers/beaverHandlers');
+app.use(beaverHandlers);
 
 app.use('/:operation', (req, res, next) => {
   console.log('----------- left server from 404 ------------');

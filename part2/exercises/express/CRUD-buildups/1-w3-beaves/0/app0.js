@@ -14,8 +14,4 @@ Beavers = [{id:0, name:"Julia"}, {id:1, name: "Sam"}, {id:2, name: "patty"}]
 
 app.listen(3001, function() {
     console.log("litening in port 3001")
-})
-
-
-
-
+});
