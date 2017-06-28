@@ -41,11 +41,11 @@ Begin! :
 					setSchema: function
 						args: schema object 
 						return: undefined
-						behavior: sets object's schema property
+						behavior: sets object's schema property to whatever you pass in.  call this method in the model file BeforE exporting it.
 					validate: function 
 						args: dataType object
 						return: boolean
-						behavior: compares new object to schema.  special note - this method is only called within the model object
+						behavior: compares new object to schema.  special note - this method is only called by other methods within the model object, never by any other object.
 
 	4 - read individual entry -
 			app.js	
