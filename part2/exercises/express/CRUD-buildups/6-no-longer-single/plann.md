@@ -29,7 +29,11 @@ either build a new basic crud app from scratch or copy paste one, we'll add on t
 									key: string
 									value: variable
 									criteria: boolean
-					examples: [{key: 'id1', value: 4, critera: false}, {key: 'id2, value: 5,  criteria: true}], [{key: 'status', value: true, criteria: false}]
+					examples: 
+						findBy([{key: 'id1', value: 4, critera: false}, {key: 'id2, value: 5,  criteria: true}])
+							returns: all objects with id2 == 5 and id1 != 4
+						findBy([{key: 'status', value: true, criteria: false}])
+							returns: all accepted friend requests
 
 				return: array containing all matching objects
 				behavior: searches through the db to find any and all objects with a key/value pair that matches the search query.  
@@ -42,7 +46,7 @@ either build a new basic crud app from scratch or copy paste one, we'll add on t
 			validate: 
 				args: 2 ids
 				return: boolean
-				behavior: checks to see if the two ids are already in a relationship object.  you dont want to save the same relationship twice
+				behavior: checks to see if the two ids are already in a relationship object.  you dont want to save the same relationship twice. 
 
 2 - create a new restful router file to access the relationship model object.  you won't yet be using it anywhere, that's the next steps.
 	at this point your app will be a basic crud application with an extra model and controller. they don't yet connect to anything
