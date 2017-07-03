@@ -26,3 +26,9 @@ then they follow up with their empathy and downlow code reviews
 not coincidence that this and battleship were good days
 
 reviews of key topics before moving on
+
+fe -> serve it -> jquery reactive -> ssr -> router -> laurens routes -> jquery async -> preact -> react
+
+getting started with javascritp scotch, all in es6
+
+dripfeed es6 with comments, old/new

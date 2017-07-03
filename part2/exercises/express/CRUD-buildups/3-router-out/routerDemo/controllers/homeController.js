@@ -4,7 +4,8 @@ var router = express.Router();
 var model = require('../controllers/model');
 
 router.get('/', (req, res) => {
-	res.send(model.word);
+	var data = model.word
+	res.sen	d(data);
 });
 
 module.exports = router;

@@ -17,3 +17,5 @@ you've heard node is asynchronous:
 so: 
 	console.log the result after doing the math
 	rerender home page AFTER new data is added
+
+	
