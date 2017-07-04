@@ -15,7 +15,7 @@ react:
         the parenthesis in brackets thing
 
 react:
-	0 - classes and babel
+	0 - classes and babel, jsx
 		see jasper in classes
 	1 - render html. 
 		stateless components
@@ -105,10 +105,10 @@ const MyComponent = (props) => {
 class IncreaseButton extends React.Component {
   constructor() {
     super();
-        this.increaseNumber = this.increaseNumber.bind(this);
+    this.increaseNumber = this.increaseNumber.bind(this);
     this.state = {
         value: 0
-        };
+    };
   }
     increaseNumber() {
         this.setState({
@@ -126,3 +126,31 @@ class IncreaseButton extends React.Component {
 }
 
 
+
+
+state, prop
+    a mini-series to introduce this
+    https://github.com/uberVU/react-guide/blob/master/props-vs-state.md
+
+the bind thing:
+    callbacks-like teach design pattern
+    no need to explain how or why
+    http://reactkungfu.com/2015/07/why-and-how-to-bind-methods-in-your-react-component-classes/
+    (we filter) https://medium.freecodecamp.com/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56
+    (they say it's avoidable) https://facebook.github.io/react/docs/handling-events.html
+    (workarounds) https://www.sitepoint.com/bind-javascripts-this-keyword-react/
+
+
+
+
+
+
+optimistic modification
+get and post backend
+no model frontend, just a controller and calls
+async requests for json.  don't call it ajax
+watch videos from people who make frameworks. sashko tubalio
+
+
+https://www.reactenlightenment.com/react-nodes/4.1.html
+singlepage app book
