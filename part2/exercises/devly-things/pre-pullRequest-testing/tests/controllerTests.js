@@ -3,4 +3,4 @@
 //		and you can't send req.body from the url
 //		SO. you'd have to wait for the views to be done
 
-// way 2 POSTMAN
+// way 2: POSTMAN
