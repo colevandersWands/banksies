@@ -8,3 +8,5 @@
   
 [the road to learn react](https://www.youtube.com/watch?v=dQw4w9WgXcQ)  
   	- (but really do google this)
+
+https://medium.com/react-ecosystem/react-components-lifecycle-ce09239010df
