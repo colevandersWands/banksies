@@ -1,4 +1,8 @@
-must do 2-3 of each project before moving on to the next
+2 parts
+	open-source follow along
+	private schedule and cool things
+
+must do 2-3 of each project before moving on to the next	
 
 js
 	some combination of tutorials and exercises

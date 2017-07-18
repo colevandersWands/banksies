@@ -35,8 +35,8 @@ hiAnjali();
 hiRoshni();
 
 // or rewrite an old one
-var byeAngali = hiAnjali.bind(roshni);
-byeAngali();
+var byeAnjali = hiAnjali.bind(roshni);
+byeAnjali();
 
 // without overwriting the old one
 //  good functional programming

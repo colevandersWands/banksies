@@ -1,4 +1,6 @@
 //	the same constructor function as in banksy.10 but using class syntax
+//  the comparison between the class and the pure javascript is not quite right
+//			can you figure out why?
 
 class OGaccountClass {
 	constructor(money) {
