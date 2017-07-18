@@ -1,3 +1,5 @@
+must do 2-3 of each project before moving on to the next
+
 js
 	some combination of tutorials and exercises
 

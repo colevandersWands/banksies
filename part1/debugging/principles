@@ -12,4 +12,3 @@ Debugging
 	- tools: debugger, console.log, inspector
 	- never assume anything.  about how your code works, about what an object looks like, ... console.log or debugger everything
 	- check the resources -> <- do that
-

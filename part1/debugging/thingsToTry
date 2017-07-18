@@ -9,3 +9,7 @@
 - read git issues and stackoverflow -> this gets harder the more complicated the project.  no one has had exactly your problem and it can take a fair bit of deducing to figure it out.
 - read git issues -> When i'm having trouble with a module I often find that it's a problem with the module.  someone has usually recommended what patch or version or similar module to use, or even written nice scripts that do the annoying console bits for you.  (prime example: NVM)
 - read the resources section ->  there's some good stuff in there.
+
+
+when googling errors: 
+	remove words specific to your code
