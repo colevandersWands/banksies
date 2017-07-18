@@ -19,4 +19,7 @@
  		10: and for methods
 	getters and setters:
 		11: it's good to use them
+	static methods:
+		12: available to the class, not it's children
+
 */

@@ -7,7 +7,7 @@ class OGaccountClass {
 		this.cash = money;
 	}
 	changeCash(deltaCash) {
-		this.cash = this.cash + deltaCash;
+		this.cash = this.cash * deltaCash;
 	}
 	displayCash() {
 		console.log('i has this many monies: ' + this.cash);
