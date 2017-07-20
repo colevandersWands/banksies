@@ -23,3 +23,6 @@
 		12: available to the class, not it's children
 
 */
+
+
+// add a lookup chain diagram

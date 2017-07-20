@@ -26,17 +26,32 @@ class View {
   }
 }
 
-/*
-BROWSERVIEW: extends VIEW to be front-end compatible
+/*   -- add a schema class with built-in validation --
+MODEL: manages a simple database. to be used by a CONTROLLER object
   properties:
-    template: *super*
+    db: {key: {value: val, _id: integer}}
+    nextId: the unique id for the next db item
   methods:
-    constructor:
-      *super*
-    render:
-      args: an array of strings
-      returns: html text with arg strings embedded
-      behavior: produces a popup
+    addOne: 
+      args: new key and new value
+      returns: nothing
+      behavior: adds the new item, sets its key, advances this.nextId
+    getOne:
+      args: a key
+      returns: the value
+      behavior: yes
+    getAll:
+      args: none
+      returns: an array with all db values
+      behavior: yes
+    update:
+      args: key to update, it's desired new value
+      returns: nothing
+      behavior: sets the key's value to the other argument
+    remove:
+      args: the key to remove
+      returns: nothing
+      behavior: yes
 */
 class Model {
   constructor() {
@@ -146,5 +161,6 @@ con.post('pedro', 'favorite');
 con.getOne('robert');
 con.remove('robert');
 con.update('pedro', 'cole');
+// this line is BAAAD.  why
 console.log(con.model.db);
 

@@ -11,7 +11,7 @@ class View {
   }
 
   render() {
-    return this.template +  this.db;
+    return this.template + this.db;
   }
 }
 
@@ -23,14 +23,13 @@ var view = new View({
 view.push('ryan');
 view.push('kate');
 
-console.log(view.render());
+// console.log(view.render());
  
 // ------------
 
 class LogView extends View {
   render() {
-    var compiled = super.render();
-    console.log(compiled);
+    // write this extension method to fix whats wrong in the bass class
   }
 }
 

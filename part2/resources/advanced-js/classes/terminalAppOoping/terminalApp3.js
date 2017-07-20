@@ -21,11 +21,19 @@ class View {
     this.template = template;
   }
 
+  getTemplate() {
+    return this.template;
+  }
+
   render(value) {
     var compiled = this.template + value;
     console.log(compiled);
   }
 }
+
+var viewer = new View('sss');
+
+viewer.template = 'kiril';
 
 /*
 BROWSERVIEW: extends VIEW to be front-end compatible

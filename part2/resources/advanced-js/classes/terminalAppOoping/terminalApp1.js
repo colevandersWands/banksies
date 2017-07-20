@@ -47,6 +47,10 @@ var vew = new View(modpod, 'yo there ');
 vew.render();
 vew.render('ryan');
 
+// figure out what's going on here, it's the key to fixing this
+console.log(vew.render('push'));
+
+
 //-------------------
 class LogView extends View {
   render() {
