@@ -19,8 +19,9 @@ function init() {
   displayHero();
 }
 init();
-
+var myfunc = init();
 //==========================CLOSURE=====================
+
 function init() {
   var name = 'Han Solo';
   function displayHero() {
@@ -29,8 +30,16 @@ function init() {
   return displayHero;
 }
 
+// remembers it's roots
 var myFunc = init();
 myFunc();
+
+// lost and orphaned - name is undefined
+function displayHero() {
+  alert(name);
+}
+displayHero();
+
 //======================================================
 function addMe(x){
 	return function(y){
@@ -101,6 +110,7 @@ var greetCurried = function(greeting) {
   var greet = greetCurried("Hello there")
   greet; --> //here i get the functio that is waiting to take parameters
   greet("Evan") --> //here the waiting inner function runs and returns the log
+
 
 //==========================EX1=========================
 //consider that u created some buttons and u have more than 2 buttons
@@ -181,6 +191,8 @@ var a = 10;
   }
 })();
 x();
+
+
 //======================================================
 //===============Linear Exercise========================
 //======================================================
