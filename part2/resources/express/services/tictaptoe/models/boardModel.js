@@ -15,7 +15,6 @@ var boardModel = {
 	getBoardState: function() {
 			return this.boardState;
 		},
-	// consumes callback
 	addMove: function(row, column, nextPlayer) {
 			var err;
 			console.log(row, column, nextPlayer)
