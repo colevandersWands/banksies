@@ -11,13 +11,15 @@ var orientation = 0;
 
 // cardinal directions do not change
 // they are not defined in a closure
-var north = function() {console.log('north');};
-var south = function() {console.log('south');};
-var east = function() {console.log('east');};
-var west = function() {console.log('west');};
+
+var cardinals = ['north', 'east', 'south', 'west'];
+var north = function() {console.log(cardinals[0]);};
+var south = function() {console.log(cardinals[1]);};
+var east = function() {console.log(cardinals[2]);};
+var west = function() {console.log(cardinals[3]);};
 
 // relative directions change
-// they are defined in a closure
+// they are redefined with closure
 var right = function() {};
 var left = function() {};
 var straight = function() {};
@@ -25,23 +27,34 @@ var back = function() {};
 
 // turn - changes which way is straight
 //		turned: 'l' is left, 'r' is right
+//		numberOf: number of 90 degree turns in that direction
 //		orientation: player's current orientation
 //		returns a new orientation and closes over relative directions
-var turn = function(turned, oldOrient) {
+var turn = function(turned, numberOf, oldOrient) {
 	var newOrient;
-	var cardinals = ['north', 'east', 'south', 'west'];
+	var message = '';
+	// determine new direction
 	if (turned == 'l') {
-		newOrient = oldOrient - 1;
-		console.log('\nturning left');
-	}
-	else if (turned == 'r') {
-		newOrient = oldOrient + 1;
-		console.log('\nturning right');
-	}
-	else {
+		newOrient = oldOrient - numberOf;
+		message = '\nturning left ' + numberOf + ' times';
+	} else if (turned == 'r') {
+		newOrient = oldOrient + numberOf;
+		message = '\nturning right ' + numberOf + ' times';
+	} else {
 		newOrient = oldOrient;
-		console.log('\nsucker');
-	};
+	}
+
+	// if they didn't turn,  set the message accordingly
+	if ( (newOrient%4) == (oldOrient%4) ) {
+		if (turned == 'l' || turned == 'r') {
+			message = '\ntools turn straight';
+		} else {
+			message = '\n' + turned
+		}
+	}
+
+
+	newOrient = newOrient%4
 
 	// *********************************    //
 	// locally defining s,r,l,b
@@ -56,28 +69,49 @@ var turn = function(turned, oldOrient) {
 	back = function () {console.log('back: ' + b)};
 	// *******************************   //
 
-	return newOrient;
+	return [message, newOrient];
 }; 
 
 // ------------------------------------------------------ //
 
 
-// turn is a pure function
+// turn is not a pure function - it reassignes the relative printers to closed functions
 // orientation needs to be reassigned at every turn
 
-orientation = turn(4, orientation);
+var orientation = 0;
+var returned;
+returned = turn(4, 9, orientation);
+console.log(returned[0])
 straight();
-orientation = turn('r', orientation);
+right();
+back();
+left();
+returned = turn('r', 4, returned[1]);
+console.log(returned[0])
 straight();
-orientation = turn('r', orientation);
+right();
+back();
+left();
+returned = turn('r', 3, returned[1]);
+console.log(returned[0])
 straight();
-orientation = turn('r', orientation);
+right();
+back();
+left();
+returned = turn('r', 2, returned[1]);
+console.log(returned[0])
 straight();
-orientation = turn('l', orientation);
+right();
+back();
+left();
+returned = turn('l', 1, returned[1]);
+console.log(returned[0])
 straight();
-orientation = turn('foot', orientation);
-straight();
-console.log('\n');
+right();
+back();
+left();
+returned = turn('foot', 6, returned[1]);
+console.log(returned[0])
 straight();
 right();
 back();
