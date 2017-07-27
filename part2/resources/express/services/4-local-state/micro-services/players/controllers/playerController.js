@@ -8,9 +8,12 @@ var playerController = {
 	togglePlayer: function(req, res) {
 		playerModel.togglePlayer();
 		res.json({success: true});
-	}	,
+	},
 	getNextPlayer: function(req, res) {
 		res.json({nextPlayer: playerModel.getNextPlayer()});
+	},
+	buildPlayer: function(req, res) {
+		playerModel.buildPlayer(req.body.data.playerState)
 	}
 }
 

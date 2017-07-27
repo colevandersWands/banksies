@@ -46,7 +46,7 @@ var app = {
 			.catch((error) => {
 			  console.log(error);
 			});
-		this.datAxios.post('/setFirstPlayer', {data: {playerState: true} })  // axios call to initialize player
+		this.datAxios.post('/buildPlayer', {data: {playerState: true} })  // axios call to initialize player
 			.then((response) => {
 				console.log('player set');
 			})

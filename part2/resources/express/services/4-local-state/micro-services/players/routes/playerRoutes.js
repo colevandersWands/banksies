@@ -7,5 +7,6 @@ router.get('/getNextPlayer', playerController.getNextPlayer);
 
 router.post('/togglePlayer', playerController.togglePlayer);
 router.post('/setFirstPlayer', playerController.setFirstPlayer);
+router.post('/buildPlayer', playerController.buildPlayer);
 
 module.exports = router;

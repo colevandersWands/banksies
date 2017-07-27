@@ -2,15 +2,17 @@
 var boardModel = { 
 	boardState: [],
 	buildBoard: function(boardDimension) {
-			var newBoard = [];
-			for(var i = 0; i < boardDimension; i++) {
-				var innerArray = [];
-				for(var j = 0; j < boardDimension; j++) {
-					innerArray.push(null);
+			if (this.boardState == []) { // only build an empty board if the server has been restarted
+				var newBoard = [];
+				for(var i = 0; i < boardDimension; i++) {
+					var innerArray = [];
+					for(var j = 0; j < boardDimension; j++) {
+						innerArray.push(null);
+					};
+					newBoard.push(innerArray);
 				};
-				newBoard.push(innerArray);
-			};
-			this.boardState = newBoard;
+				this.boardState = newBoard;
+			}
 		},
 	getBoardState: function() {
 			return this.boardState;
