@@ -71,7 +71,8 @@ var app = {
 	},
 	buildButtons: function() {
 		document.body.innerHTML += '<div onclick=\'app.saveGame()\'> save current game </div>'
-		document.body.innerHTML += '<div onclick=\'app.loadGame()\'> load last save </div>'  	
+		document.body.innerHTML += '<div onclick=\'app.loadGame()\'> load last save </div>'
+		document.body.innerHTML += '<div onclick=\'app.reset()\'> reset game </div>'  	
 	},
 	saveGame: function() {
 		var currentBoard = this.boardModel.getBoardState();
@@ -108,6 +109,11 @@ var app = {
 			.catch((error) => {
 			  console.log(error);
 			});
+	},
+	reset: function() {
+		this.boardModel.buildBoard(this.dimension);
+		this.playerModel.setPlayerState(true);
+		this.repopulateBoard(null, this.boardModel.getBoardState());
 	}
 };
 
