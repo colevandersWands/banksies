@@ -20,7 +20,6 @@ var otherObj = {
 
 var bound = obj.bound();
 var rebound = bound.bind(otherObj);
-
 bound();
 rebound();
 
@@ -37,5 +36,3 @@ var objectistest = {
 		return this.method();
 	}
 };
-
-objectistest.method()
