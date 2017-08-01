@@ -1,0 +1,118 @@
+.btn {
+  background: none;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+  min-width: 155px;
+  &:hover {
+    background: none;
+    color: #fff;
+    border-color: #aaa;
+    background-color: #aaa;
+  }
+}
+
+.btn-primary {
+  border-radius: 25px;
+  display: inline-block;
+  padding: 14px 28px 13px 28px;
+  line-height: 1;
+  border: 2px solid #aaa;
+  font-family: "Raleway", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333;
+  &.btn-filled {
+    background: #fff;
+    color: #000;
+    &:hover {
+      border-color: #fff;
+      background-color: #eee;
+      color: #333;
+    }
+  }
+}
+
+.btn-white {
+  border-color: #fff;
+  color: #fff;
+  &.btn-filled {
+    background: #fff;
+    color: #000;
+  }
+  &:hover {
+    background: #fff;
+    color: #333333;
+    //border-color: $elium_yellow;
+ 
+  }
+  &.btn-filled:hover {
+    background: #fff;
+    color: #555;
+    border: 1px solid #555;
+  }
+}
+
+.btn-yellow {
+    border-color: lighten($elium-yellow, 12%);
+    color: #000;
+
+    &.btn-filled {
+        background: darken($elium-yellow, 5%);
+        color: #fff;
+    }
+
+    &:hover {
+        color: #333333;
+    }
+
+    &.btn-filled:hover {
+        background: $elium-yellow;
+        color: #555;
+        border: 1px solid darken($elium-yellow, 5%);
+    }
+}
+
+.btn-grey {
+  border-color: #777777;
+  color: #333333;
+  &:hover {
+    background-color: #333333;
+    color: #fff;
+    border-color: #333333;
+  }
+}
+
+.btn-lg {
+  padding: 18px 40px;
+}
+
+.btn-sm {
+  padding: 10px 28px;
+  font-size: 11px;
+}
+
+.btn-xs {
+  padding: 8px 24px;
+  font-size: 10px;
+}
+
+.btn-text-only {
+  border-color: rgba(0, 0, 0, 0);
+  &:hover {
+    background: none;
+    color: #5e7c88;
+    border-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.btn-streatch{
+    max-width: none !important;
+    width: 100% !important;
+}
+
+.btn-squearish {
+    border-radius: 5px !important;
+}

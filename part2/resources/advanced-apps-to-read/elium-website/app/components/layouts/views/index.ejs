@@ -1,0 +1,287 @@
+<!-- views -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            var mule = {}
+        </script>
+        <%- include("plugins/index") -%>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>  // becuase websites should load at the top of the page
+            window.onbeforeunload = function () {
+              window.scrollTo(0, 0);
+            }
+        </script>
+        <!-- Keep body hidden untill elium.scss loads, makes google page speed tests perform better -->
+        <style type="text/css">
+            body{ display: none}
+        </style>
+    
+        
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js" defer></script>-->
+    </head>
+    
+    <body>
+    
+    <!-- initialise and setup facebook js sdk-->
+        <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '971688036294450',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+    FB.getLoginStatus(function (response) {
+    statusChangeCallback(response);
+    }); 
+    FB.ui({
+  method: '',
+  redirect_uri: 'YOUR_URL'
+    }, function(response){});
+  };
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+    <!-- initialise and setup    js sdk-->
+        <!-- header -->
+        <%- include("plugins/in_body/_google_tagmanager") -%>
+        <%- include("navbar") %>
+        <div id="pjax-container" class="main-container">
+            <%- include(view) -%>
+        </div>
+        <!-- modal for info -->
+        <%- include('_footer') -%>
+        <%- include('metatags/index') -%>
+        
+                    <!-- <%# include("_apply_modals") -%> -->
+                    <%- include("_video_modals") -%>
+    </body>
+    
+
+        
+    <!-- payment plans -->
+    <div>
+        
+        <!-- half-time -->
+        <div id="half-time" class="modal fade modal-position" >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        <h4 class="modal-title" style = "font-size:200%">Half-Time Pricing</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text">
+                            <p style = "font-size:150%; line-height: 2">
+                                The standard pricing options are for 6 hours of class-time per week
+                                and the use of a pre-existing curriculum.<br>
+                                Contact us for custom a custom curriculum or greater hours.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- mentoring -->
+        <div id="mentoring" class="modal fade modal-position" >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        <h4 class="modal-title" style = "font-size:200%">Fullstack Mentoring</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text">
+                            <p style = "font-size:150%; line-height: 2">
+                                The standard price of 580EUR is for one person. <br>
+                                This price includes 4 meetings per month.<br>
+                                Pricing options for 5+ meetings are available. <br>
+                                Discounts for groups of up to 3 are also available.  <br>
+                                Contact us for your custom plan today!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- pro plan -->
+        <div id="standard" class="modal fade modal-position" >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        <h4 class="modal-title" style = "font-size:200%">Full pro plan</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text">
+                            <p style = "font-size:150%; line-height: 2">
+                                Get started by reservig your spot.
+                                There is a registration fee of 750 EUR.
+                                The rest of the cost can be payed in 1-2 installments up to the first month of the bootcamp.
+                                Our bootcamps start every 3 months, your registration fee can be used to take part in any bootcamp during the year.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- payment discounts -->
+        <div id="discounts" class="modal fade modal-position">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        <h4 style = "font-size:200%" class="modal-title">We have two discounts available:</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text" >
+                            <p style = "font-size:120%; line-height: 2">
+                                Earlybird Special: <br> Compromise and commitment are values we support, for this reason applicants that would like to pay the full fee together with the reservation fee 1 month before of the start of a program will enjoy a 10% discount on the total program fee.
+                            </p>
+                        </div>
+                        <div class="text">
+                            <p style = "font-size:120%; line-height: 2">
+                                <br> Referrals: <br> We encourage friends that trust each other to join the program together and support each other during the journey. For this reason, if you apply together with someone else we will give both of you a 150 eur discount.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- payment scholarship -->
+        <div id="scholarship" class="modal fade modal-position">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        <h4 class="modal-title" style = "font-size:200%">Learn and Teach</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text">
+                            <p style = "font-size:120%; line-height: 2">
+            If you want to push it to the next level and become a pro, what best that to first learn and then teach. if you take this option you will have to pay the full amount of the program but as soon as you finish the first 3 months we will reimburse the totality of the payment except for 750 EUR.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- payment finance -->
+        <div id="finance" class="modal fade modal-position">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        <h4 class="modal-title" style = "font-size:200%">Up to 13 months Financing option</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text" style = "font-size:120%; line-height: 2">
+                            At Elium, we believe in the success of our students. That's why we provide a financing plan for students in need. Our “Pay Later” financing method allows you to start paying after you finish your course.<br/><br/>
+                            How does it work? It’s simple. Secure <y></y>our place by making your reservation payment. Sign a contract with Elium. Then, after the end of the program, begin paying a monthly instalments over the period of 10 months. Convenient right?<br/><br/>
+                            We will tell you exactly how much and when it is due. An additional insurance charge of 900 EUR will be added to the price of the program to ensure that Elium can continue to support students in need. Get in touch to find out more: sophie@elium.academy
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          <!-- Growth hacking 12 weeks -->
+        <div id="finance1" class="modal fade modal-position">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        <h4 class="modal-title" style = "font-size:200%">Pro plan</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text" style = "font-size:120%; line-height: 2">
+                            
+                          
+                          By registering to our 12 week program you will engage in our full practical experience and work 10 weeks on a growth team with a fantastic scale-Up and your Elium Growth mentor
+                           
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+           <!-- Growth hacking 2 weeks -->
+        <div id="finance2" class="modal fade modal-position">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        <h4 class="modal-title" style = "font-size:200%">Intense and fast</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text" style = "font-size:120%; line-height: 2">
+                            
+                          
+                          By registering for our 2-week program you will engage in a very intense full-time 2 weeks training together with all the participants of the full 12-week program. during this experience, you will have the chance to practice and implement all the learning during our workshops.
+                           
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+          <!-- Growth hacking 2 weeks -->
+        <div id="finance3" class="modal fade modal-position">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        <h4 class="modal-title" style = "font-size:200%">Get supported by us</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text" style = "font-size:120%; line-height: 2">
+                            
+                          
+                          if you have experienced as a coder or growth hacker, we sponsor some students during the program in exchange for their support to help us improve our future programs and connect better to our clients
+                           
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+    </div>
+    
+</html>

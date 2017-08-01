@@ -1,0 +1,61 @@
+<nav class="simple-bar top-bar card-2">
+    <div class="container">
+        <div class="row nav-menu nav">
+            <div class="col-md-3 col-sm-3">
+                <a href=<%= AppRoutes.home () %>><img class="logo logo-dark" alt="Logo" src=<%= imageUrl('Elium-LogoBlack.svg')%>> </a>
+            </div>
+            <div class="col-md-9 col-sm-9 text-right">
+                <ul class="menu">
+                    <li><a href=<%= AppRoutes.students () %>> <strong>Students</strong> </a> </li>
+                    <li><a href=<%= AppRoutes.companies () %>> <strong>Partners</strong> </a> </li>
+                    <li><a href="/#programs"> <strong>Programs</strong> </a> </li>
+                    <li><a href=<%= AppRoutes.about () %>> <strong>Why Us</strong> </a> </li>
+                    <li><a href="http://blog.elium.academy/" target="_blank"> <strong>Blog</strong>  </a> </li>
+                    <li><a href=<%= AppRoutes.dual_apply () %>><strong style="color:#2ECC71;">Apply</strong> </a></li>
+                     <li><a href=<%= AppRoutes.contact () %>><strong>Contact</strong> </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mobile-toggle">
+            <i class="icon icon_menu"></i>
+        </div>
+    </div>
+</nav>
+
+
+<!-- <div class="nav-container">
+
+    <nav class="simple-bar top-bar">
+        <div class="container">
+
+
+            <div class="row nav-menu nav">
+                <div class="col-md-3 col-sm-3 columns">
+                    <a href=<#= AppRoutes.home () %>><img class="logo logo-dark" alt="Logo" src=<#= imageUrl('logo-white.svg')%>> </a>
+                </div>
+
+                <div class="col-md-9 col-sm-9 columns text-right">
+                    <ul class="menu">
+                        <li><a href=<#= AppRoutes.students () %>>Students </a></li>
+                        <li><a href=<#= AppRoutes.companies () %>>Partners </a></li>
+                        <li><a href="#programs"></a>Programs</a></li>
+                        <li><a href=<#= AppRoutes.about () %>>About Us </a></li>
+                        <li><a href="blog.elium.academy">Blog </a></li>
+                        <li><a href=<#= AppRoutes.students_apply () %>Apply </a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</div>
+
+<!-- <li class="has-dropdown">
+                            <a href="#programs">Programs</a>
+                            <i id="mobile-hamburger" class="icon arrow_carrot-down" style="font-size: 11px"></i>
+                            <ul class="subnav">
+                                <li><a href=<#= AppRoutes.level1 () %>>Fullstack web development & workflow </a></li>
+                                <li><a href=<#= AppRoutes.level2 () %>>Adv Full stack & Tech Management </a> </li>
+                                <li><a href=<#= AppRoutes.level3 () %>>Leadership & Management of Tech </a> </li>
+                            </ul>
+                        </li> -->

@@ -1,0 +1,94 @@
+<div class="footer-container">
+    <footer class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-2 col-md-2">
+                    <ul>
+                        <p class="lead"> About </p>
+                            <li>
+                                <span class="sub">
+                                    <a target="_blank" href="/about">
+                                         About
+                                    </a>
+                                </span>
+                            </li>
+                           
+                            <li>
+                                <span class="sub">
+                                    <a target="_blank" href="/contact/#faq">
+                                         FAQ
+                                    </a>
+                                </span>
+                            </li>
+                            
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-sm-4 col-md-4">
+                    <ul>
+                        <p class="lead"> Social </p>
+                        <% [["https://www.facebook.com/EliumAcademy", "social_facebook", "Facebook" ],
+                         ["https://twitter.com/EliumAcademy_", "social_twitter", "Twitter" ],
+                         ["https://www.linkedin.com/company/elium-school", "social_linkedin", "LinkedIn"],
+                         ["https://www.youtube.com/EliumAcademyOfTech", "social_youtube", "YouTube" ]].forEach(([url, icon, text]) => {%>
+                            <li>
+                                <span class="sub">
+                                    <a target="_blank" href="<%= url %>">
+                                        <i class="icon <%= icon %>"></i>
+                                         <%= text %> 
+                                    </a>
+                                </span>
+                            </li>
+                        <% }) %>
+                    </ul>
+                    <ul>
+                        <p class="lead"> Contact </p>
+                            <li>
+                                <span class="sub">
+                                    <a target="_blank" href="mailto:sophie@elium.academy?Subject = Hi Sophie ...">
+                                        <i class="icon icon_mail"></i>
+                                         sophie@elium.academy
+                                    </a>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="sub">
+                                    <i class="icon icon_phone"></i> +32 485646801
+                                </span>
+                            </li>
+                            <li>
+                                <p class="sub">
+                                    <i class="icon icon_house"></i> Rue de la Science 23<br>1000 Brussels <p/> 
+                                </p>
+                            </li>
+                            <li>
+                                <p>Belgium</p>
+                                
+                            </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-xs-12 col-sm-2 col-md-2">
+                    <ul>
+                        <p class="lead"> Legal </p>
+                        <li>
+                            <p class="sub">Copright 2016 © Elium&nbsp;vzw </p> <p> Company number 0654.848.780 </p>
+                            <p></p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <ul>
+                        <p class="lead"> Subscribe to our Newsletter </p>
+                        <p> Stay informed with news and updates about Elium Academy.</p>
+                        <%- include("footer/_mailchimp") -%>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</div>

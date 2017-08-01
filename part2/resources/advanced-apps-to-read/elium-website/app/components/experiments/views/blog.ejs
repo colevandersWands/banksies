@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+                        
+                        
+
+                        
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Load styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+                               integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" defer>
+        <link rel="stylesheet" href="/css/elium.scss" crossorigin="anonymous" defer>
+        <link rel="stylesheet" href="/css/experiments.scss" crossorigin="anonymous" defer>
+
+        <!-- Load js -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js" defer></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+                integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous" defer></script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js" defer></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js" defer></script>
+        <script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js" defer></script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.1/vivus.min.js" integrity="sha256-ddmqdnxULbX0wu/hOmqb0aP4CcqSIjFzOkah72ARjcI=" crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+        <script type="text/javascript">
+            var mule = {}
+        </script>
+        <style>
+            .play-button {
+              width: 80px;
+              height: 80px;
+              border: 2px solid #fff;
+              text-align: center;
+              margin: 0 auto;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              margin-top: -40px;
+              margin-left: -40px;
+              z-index: 4;
+              border-radius: 50%;
+              transition: all 0.3s ease;
+              -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              cursor: pointer;
+            }
+            .play-button:before {
+              position: absolute;
+              top: 50%;
+              margin-top: -15px;
+              left: 50%;
+              margin-left: -8px;
+              content: '';
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 15px 0 15px 26.0px;
+              border-color: transparent transparent transparent #ffffff;
+            }
+            .play-button:hover {
+              transform: scale(1.1);
+              -webkit-transform: scale(1.1);
+            }
+            .play-button.dark {
+              border-color: #292929;
+            }
+            .play-button.dark:before {
+              border-color: transparent transparent transparent #292929;
+            }
+        </style>
+    </head>
+
+    <body>
+<div class="main-container">
+    <section class="blog-masonry bg-muted">
+
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <ul class="blog-filters">
+                        <li data-filter="*" class="active"><span>All</span></li>
+                        <li data-filter=".branding"><span>Branding</span></li>
+                        <li data-filter=".development"><span>Development</span></li>
+                        <li data-filter=".print"><span>Print Design</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>  Menu Filters-->
+
+        <div class="container">
+                    <!--
+                       <div class="col-sm-6 text-center">
+                            <h4 class="uppercase mb16">Embed Via Modal</h4>
+                            <p class="lead mb64">
+                                Play icon that invokes an overlayed modal for iFrame sources.
+                            </p>
+                            <div class="modal-video-container mb16">
+                                <div class="play-button1 large dark inline"></div>
+                                <div class="modal-video">
+                                    <i class="ti-close close-iframe"></i>
+                                    <iframe data-src="http://player.vimeo.com/video/25737856?badge=0&title=0&byline=0&title=0" data-autoplay="1"></iframe>
+                                </div>
+                            </div>
+                            <!--end of modal video--> <!--
+                        </div>
+                    </div>
+                    
+                    
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="blog-masonry-container">
+
+                        <div class="col-md-6 col-sm-6 blog-masonry-item development popup" id="media-popup">
+                            <div class="item-inner">
+                                <a href="#media-popup">
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/OuTpYZmLd1I?showinfo=0&amp;rel=0&amp;modestbranding=1" frameborder="0" allowfullscreen=""></iframe>
+                                </a>
+                            <div class="item-inner quote-post">
+                                <div class="post-title">
+                                    <h1>"A camel is a horse designed by committee"</h1>
+                                    <div class="post-meta">
+                                        <span class="sub alt-font">Alec Issigonis</span>
+                                        <span class="sub alt-font">1965</span>
+                                    </div>
+                                    <a href="blog-single.html" class="link-text">Read More</a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        -->
+
+                        <div class="col-md-6 col-sm-6 blog-masonry-item branding">
+                            <div class="item-inner">
+                                <a href="blog-single.html">
+                                    <img alt="Blog Preview" src="img/blog-masonry-2.jpg">
+                                </a>
+                            <div class="item-inner quote-post">
+                                <div class="post-title">
+                                    <h1>"A camel is a horse with back problems"</h1>
+                                    <div class="post-meta">
+                                        <span class="sub alt-font">Alec Issigonis</span>
+                                        <span class="sub alt-font">1965</span>
+                                    </div>
+                                    <a href="blog-single.html" class="link-text">Read More</a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 blog-masonry-item print">
+                            <div class="item-inner">
+                                <a href="blog-single.html">
+                                    <img alt="Blog Preview" src="img/blog-masonry-3.jpg">
+                                </a>
+                            <div class="item-inner quote-post">
+                                <div class="post-title">
+                                    <h1>"A camel is a horse with identity crisis"</h1>
+                                    <div class="post-meta">
+                                        <span class="sub alt-font">Alec Issigonis</span>
+                                        <span class="sub alt-font">1965</span>
+                                    </div>
+                                    <a href="blog-single.html" class="link-text">Read More</a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 blog-masonry-item development">
+                            <div class="item-inner">
+                                <a href="blog-single.html">
+                                    <img alt="Blog Preview" src="img/blog-masonry-4.jpg">
+                                </a>
+                            <div class="item-inner quote-post">
+                                <div class="post-title">
+                                    <h1>"A camel is a horse, deal with it"</h1>
+                                    <div class="post-meta">
+                                        <span class="sub alt-font">Alec Issigonis</span>
+                                        <span class="sub alt-font">1965</span>
+                                    </div>
+                                    <a href="blog-single.html" class="link-text">Read More</a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 blog-masonry-item development">
+
+                                <div class="item-inner quote-post">
+                                    <div class="post-title">
+                                        <h1>"A camel is a horse designed by committee"</h1>
+                                        <div class="post-meta">
+                                            <span class="sub alt-font">Alec Issigonis</span>
+                                            <span class="sub alt-font">1965</span>
+                                        </div>
+                                        <a href="blog-single.html" class="link-text">Read More</a>
+                                    </div>
+                                </div>
+
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 blog-masonry-item branding">
+
+                                <div class="item-inner quote-post">
+                                    <div class="post-title">
+                                        <h1>"A camel is a horse with back problems"</h1>
+                                        <div class="post-meta">
+                                            <span class="sub alt-font">Alec Issigonis</span>
+                                            <span class="sub alt-font">1965</span>
+                                        </div>
+                                        <a href="blog-single.html" class="link-text">Read More</a>
+                                    </div>
+                                </div>
+
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 blog-masonry-item print">
+
+                                <div class="item-inner quote-post">
+                                    <div class="post-title">
+                                        <h1>"A camel is a horse with identity crisis"</h1>
+                                        <div class="post-meta">
+                                            <span class="sub alt-font">Alec Issigonis</span>
+                                            <span class="sub alt-font">1965</span>
+                                        </div>
+                                        <a href="blog-single.html" class="link-text">Read More</a>
+                                    </div>
+                                </div>
+
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 blog-masonry-item development">
+
+                                <div class="item-inner quote-post">
+                                    <div class="post-title">
+                                        <h1>"A camel is a horse, deal with it"</h1>
+                                        <div class="post-meta">
+                                            <span class="sub alt-font">Alec Issigonis</span>
+                                            <span class="sub alt-font">1965</span>
+                                        </div>
+                                        <a href="blog-single.html" class="link-text">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="blog-sidebar">
+                        <div class="sidebar-widget">
+                            <h5>From The Web</h5>
+                            <ul class="blog-filters">
+                                <li data-filter="*" class="active"><span>Latest</span><img alt="Latest" src="img/project1.jpg"> </li>
+                                <li data-filter=".branding"><span>Projects</span><img alt="Projects" src="img/project2.jpg"></li>
+                                <li data-filter=".development"><span>Events</span><img alt="Events" src="img/project3.jpg"></li>
+                                <li data-filter=".print"><span>Tech</span><img alt="Tech" src="img/project4.jpg"></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h5>Recent Posts</h5>
+                            <ul>
+                                <li><a href="#">Discussing Web Trends <i class="icon arrow_right"></i></a></li>
+                                <li><a href="#">Image Slider Post <i class="icon arrow_right"></i></a></li>
+                                <li><a href="#">Soundcloud Embed Post <i class="icon arrow_right"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h5>Tags</h5>
+                            <ul class="tags">
+                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Photography</a></li>
+                                <li><a href="#">Responsive</a></li>
+                                <li><a href="#">Freebie</a></li>
+                                <li><a href="#">Variant</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h5>Instagram</h5>
+                            <div class="instafeed" data-user-name="behance">
+                                <ul></ul>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h5>Twitter</h5>
+                            <div id="tweets" data-widget-id="492085717044981760">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!--
+     <div class="row">
+                    <div class="col-md-8 col-sm-9">
+                        <div class="article-body">
+                            <p class="lead">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                            </p>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                            </p>
+                            <figure>
+                                 <img alt="Blog Article Figure" src="img/hero3.jpg">
+                                 <figcaption>Here is a caption for this picture</figcaption>
+                             </figure>
+    <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+    </p>
+    <h2>A mid-post heading for some attention</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+    </p>
+    <blockquote>
+        “Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est”
+    </blockquote>
+    <p>
+        Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+    </p>
+</div>
+<div class="author-details">
+    <img alt="Author" src="img/team-small-1.png">
+    <h5>Chip Mayer</h5>
+    <p>
+        Molly Lautamo is a freelance writer and conservationist. She currently works as the Admissions Coordinator and oversees communications at the Seymour Marine Discovery Center in Santa Cruz, CA.
+    </p>
+    <ul class="social-icons">
+        <li>
+            <a href="#">
+                <i class="icon social_twitter"></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="icon social_facebook"></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="icon social_tumblr"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+     -->
+
+    <!-- <section class="article-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-9">
+                    <div class="article-body">
+                        <p class="lead">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                        </p>
+                        <figure>
+                            <img alt="Blog Article Figure" src="img/hero3.jpg">
+                            <figcaption>Here is a caption for this picture</figcaption>
+                        </figure>
+                        <p>
+                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+                        </p>
+                        <h2>A mid-post heading for some attention</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                        </p>
+                        <blockquote>
+                            “Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est”
+                        </blockquote>
+                        <p>
+                            Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+                        </p>
+                    </div>
+                    <div class="author-details">
+                        <img alt="Author" src="img/team-small-1.png">
+                        <h5>Chip Mayer</h5>
+                        <p>
+                            Molly Lautamo is a freelance writer and conservationist. She currently works as the Admissions Coordinator and oversees communications at the Seymour Marine Discovery Center in Santa Cruz, CA.
+                        </p>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="#">
+                                    <i class="icon social_twitter"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="icon social_facebook"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="icon social_tumblr"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section> -->
+
+    <section class="strip bg-primary">
+        <div class="container">
+            <div class="row clearfix">
+                <form class="mail-list-signup">
+                    <div class="col-sm-9 col-xs-12 pull-left clear-fix">
+                        <h3 class="text-white pull-left"><strong>Get Notified.&nbsp;</strong></h3>
+                        <input type="text" class="signup-email-field validate-required validate-email" placeholder="Enter your email here here">
+                    </div>
+
+                    <div class="col-sm-3 col-xs-12 pull-right text-right">
+                        <input type="submit" class="btn btn-primary btn-filled" value="Subscribe">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <iframe class="mail-list-form" srcdoc="">
+        </iframe>
+    </section>
+    
+</div>
+        
+    </body>
+    
+                <div class="bs-example col-sm-6">
+            <div class="row">
+                <!-- Button HTML (to Trigger Modal) -->
+                <a href="#myModal" class="play-button dark large inline" data-toggle="modal"></a>
+                
+                <!-- Modal HTML -->
+                <div id="myModal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                          
+                            <div class="modal-body" style="margin:0; padding:0; line-height:0">
+                                <iframe id="cartoonVideo" width="100%" height="325" src="https://www.youtube.com/embed/OuTpYZmLd1I?showinfo=0&amp;rel=0&amp;modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+            </div>
+</html>

@@ -1,0 +1,237 @@
+
+$gray-border: #ccc;
+
+.pricing-tables {
+
+    .crossed{
+        border-bottom: none;
+        span.amount{
+            color: #fff;
+            text-decoration:line-through
+        }
+    }
+    .col-md-4 {
+        &:first-child .pricing-table {
+            //border-radius: 25px 0px 0px 25px;
+        }
+        &:last-child .pricing-table {
+            border-right: 2px solid rgba(255, 255, 255, 0.2);
+            //border-radius: 0px 25px 25px 0px;
+        }
+    }
+
+    .col-md-5 {
+      &:first-child .pricing-table {
+        //border-radius: 25px 0px 0px 25px;
+      }
+      &:last-child .pricing-table {
+        //border-radius: 0px 25px 25px 0px;
+        border: 1px solid $gray-border;
+      }
+    }
+
+
+    .col-md-6 {
+      &:first-child .pricing-table {
+        //border-top-left-radius: 25px;
+        //border-bottom-left-radius: 25px;
+        border: 1px solid #fff;
+        border-right:none;
+        .highlight{
+            border-radius: 25px 0px 0px 0;
+        }
+      }
+      &:last-child .pricing-table {
+        //border-top-right-radius: 25px;
+        //border-bottom-right-radius: 25px;
+        border: 1px solid #fff;
+        .highlight{
+            //border-radius: 0px 25px 0px 0;
+        }
+      }
+    }
+
+     .gray-yellow{
+        .pricing-table{
+            color:#000;
+            background-color: #555;
+            li, span {
+            }
+        }
+    }
+
+    .disabled{
+        
+    }
+    p > a {
+        color: #1dc9ff;
+    }
+    .curriculum-built {
+        border-top: 2px solid rgba(255, 255, 255, 0.2);
+        padding-top: 10px;
+    }
+    .main-image {
+        height: 150px;
+        margin-top: -75px;
+        background-color: white;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+    }
+    .companies-image {
+        max-width: 100px;
+    }
+
+    .pricing-table{
+        .explanation {
+            margin: 0 10%;
+            font-weight: 300;
+            text-align: justify;
+        }
+        .highlight{
+            margin-bottom: 20px;
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        span.amount{
+            line-height: 1;
+        }
+        &.disabled{
+            opacity: 0.9;
+        }
+
+        &.bluish{
+            background-color: $bluish;
+        }
+        &.gray{
+            background-color: #fcfcfc;
+        }
+
+        &.white{
+            background-color: #fff;
+        }
+
+        &.hover_gray:hover{
+                background-color: #eee;
+        }
+
+        a.call-to-action{
+            margin-bottom: 40px
+        }
+
+        &.yellow-border{
+            border: none;
+            border-top: 1px solid $gray-border;
+            border-bottom: 1px solid $gray-border;
+            border-left: 1px solid $gray-border;
+            div {
+                border: none;
+            }
+/*             &:hover{
+                background-color: $elium-yellow ;
+                font-size: 120%;
+            } */
+         }
+
+    }
+}
+
+
+
+.pricing-tables {
+
+  .curriculum-built {
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+  }
+  .main-image {
+    height: 150px;
+    margin-top: -75px;
+    background-color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+  }
+  .companies-image {
+    max-width: 100px;
+  }
+}
+
+.highlight_java:hover {
+  background-color: #0573B2;
+}
+
+.highlight_rails:hover {
+  background-color: #A62C39;
+}
+
+.highlight_mean:hover {
+  background-color: #2ecc71;
+}
+
+.background-elium {
+  background-color: $elium_yellow;
+}
+
+.milestones{
+    i.icon, .pin-body, .pin-head{
+        margin: 0px auto;
+    }
+    .pin-body{
+        @include transition( all 0.2s ease)
+    }
+    .pin-head{
+        @include transition( all 0.3s ease)
+    }
+     h5, span {
+        @include transition( all 0.4s ease)
+    }
+
+    .pin-body, .pin-head, i.icon, h5 {
+        margin: 0px auto;
+        @include transition( all 0.1s ease)
+    }
+    .pin-body {
+        width: 2px;
+        height: 30px;
+        background-color: $elium_yellow;
+    }
+    .pin-head {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid $elium_yellow;
+        margin-bottom: 24px;
+    }
+
+    .feature:hover{
+        span {
+            color: #000;
+        }
+        h5{
+            color: #FFA500;
+        }
+        i.icon{
+            color: #555;
+            position: relative;
+            border: 2px solid #555;
+        }
+        .pin-body {
+            background-color: #555;
+        }
+        .pin-head {
+            background-color: #888;
+            border: 2px solid #555;
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .pricing-table.yellow-border.gray.hover_gray {
+        background-color: #333;
+        color: #fff;
+    }
+    .pricing-tables {
+      .pricing-table .highlight {
+        //border-radius: 23px 23px 0 0 !important;
+      }
+    }
+}
